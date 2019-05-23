@@ -15,6 +15,7 @@
 		6839292D22968E430098E185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6839292B22968E430098E185 /* LaunchScreen.storyboard */; };
 		6839293822968E430098E185 /* Get_Ballaena_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839293722968E430098E185 /* Get_Ballaena_iOSTests.swift */; };
 		6839294322968E430098E185 /* Get_Ballaena_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839294222968E430098E185 /* Get_Ballaena_iOSUITests.swift */; };
+		683929552296A9D10098E185 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 683929542296A9D10098E185 /* splash.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6839293E22968E430098E185 /* Get-Ballaena-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Get-Ballaena-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6839294222968E430098E185 /* Get_Ballaena_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get_Ballaena_iOSUITests.swift; sourceTree = "<group>"; };
 		6839294422968E430098E185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		683929542296A9D10098E185 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,11 @@
 		6839291E22968E410098E185 /* Get-Ballaena-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				683929532296A9AC0098E185 /* Image */,
+				683929522296A87D0098E185 /* Util */,
+				683929512296A86A0098E185 /* UI */,
+				683929502296A85A0098E185 /* ViewControllers */,
 				6839291F22968E410098E185 /* AppDelegate.swift */,
-				6839292122968E410098E185 /* ViewController.swift */,
-				6839292322968E410098E185 /* Main.storyboard */,
 				6839292922968E430098E185 /* Assets.xcassets */,
 				6839292B22968E430098E185 /* LaunchScreen.storyboard */,
 				6839292E22968E430098E185 /* Info.plist */,
@@ -126,6 +130,37 @@
 				6839294422968E430098E185 /* Info.plist */,
 			);
 			path = "Get-Ballaena-iOSUITests";
+			sourceTree = "<group>";
+		};
+		683929502296A85A0098E185 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6839292122968E410098E185 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		683929512296A86A0098E185 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6839292322968E410098E185 /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		683929522296A87D0098E185 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		683929532296A9AC0098E185 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				683929542296A9D10098E185 /* splash.png */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				683929552296A9D10098E185 /* splash.png in Resources */,
 				6839292D22968E430098E185 /* LaunchScreen.storyboard in Resources */,
 				6839292A22968E430098E185 /* Assets.xcassets in Resources */,
 				6839292522968E410098E185 /* Main.storyboard in Resources */,
