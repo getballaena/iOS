@@ -20,7 +20,9 @@ class NavigationShape: UINavigationController {
 
 class TabShape: UITabBarController {
     override func viewDidLoad() {
-        self.tabBar.backgroundColor = Color.MAINBLUE.getColor()
-        self.tabBar.barTintColor = .white
+        self.tabBar.isTranslucent = false
+        self.tabBar.barTintColor = Color.MAINBLUE.getColor()
+        self.tabBar.unselectedItemTintColor = .gray
+        self.tabBar.tintColor = .white
     }
 }

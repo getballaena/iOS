@@ -27,13 +27,14 @@
             </objects>
             <point key="canvasLocation" x="132" y="134"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Shape-->
         <scene sceneID="toc-05-xZt">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Pej-aw-yRz" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Pej-aw-yRz" customClass="TabShape" customModule="Get_Ballaena_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="tCg-LU-Bc7"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qVL-y8-IG2">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

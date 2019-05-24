@@ -10,20 +10,111 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--쿠폰함-->
         <scene sceneID="TrI-an-Uem">
             <objects>
-                <viewController id="5yW-jn-A3q" sceneMemberID="viewController">
+                <viewController id="5yW-jn-A3q" customClass="CouponsVC" customModule="Get_Ballaena_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ol4-rO-Mce">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whale_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="ReX-QM-29w">
+                                <rect key="frame" x="20" y="64" width="70" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="NJA-HG-AFb"/>
+                                    <constraint firstAttribute="width" constant="70" id="ooP-1C-9qq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스탬프 투어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2m-wJ-cjS">
+                                <rect key="frame" x="98" y="68" width="96" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지도를 통해 부스의 위치를 확인해보세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjy-Rj-zl6">
+                                <rect key="frame" x="98.000000000000014" y="102" width="241.33333333333337" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모든 쿠폰은 부스에서 교환 및 사용 가능 합니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lX-1f-wsn">
+                                <rect key="frame" x="48" y="132" width="279" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u8M-hx-36n">
+                                <rect key="frame" x="20" y="190" width="335" height="529"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3j8-Gp-JJ8">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3j8-Gp-JJ8" id="Lmy-oK-XwY">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="99.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부스 참여 우수자 쿠폰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBR-ki-uzb">
+                                                    <rect key="frame" x="20" y="16" width="170" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에베벱레베레베ㅔ레베" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4f-6Y-cB5">
+                                                    <rect key="frame" x="20" y="45" width="148" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="G4f-6Y-cB5" firstAttribute="leading" secondItem="Lmy-oK-XwY" secondAttribute="leadingMargin" constant="5" id="9Vr-t7-Xgl"/>
+                                                <constraint firstItem="cBR-ki-uzb" firstAttribute="top" secondItem="Lmy-oK-XwY" secondAttribute="topMargin" constant="5" id="U9F-qW-bk3"/>
+                                                <constraint firstItem="cBR-ki-uzb" firstAttribute="leading" secondItem="Lmy-oK-XwY" secondAttribute="leadingMargin" constant="5" id="fKZ-ZX-ROg"/>
+                                                <constraint firstItem="G4f-6Y-cB5" firstAttribute="top" secondItem="cBR-ki-uzb" secondAttribute="bottom" constant="5" id="tsP-02-dEk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.makesToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderColor" value="UIColor.black"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7lX-1f-wsn" firstAttribute="top" secondItem="ReX-QM-29w" secondAttribute="bottom" constant="8" id="7Xg-Vv-Va5"/>
+                            <constraint firstItem="M2m-wJ-cjS" firstAttribute="top" secondItem="4jS-mq-TDp" secondAttribute="top" constant="24" id="GUV-8A-f66"/>
+                            <constraint firstItem="ReX-QM-29w" firstAttribute="leading" secondItem="4jS-mq-TDp" secondAttribute="leading" constant="20" id="I1v-b0-sdJ"/>
+                            <constraint firstItem="ReX-QM-29w" firstAttribute="top" secondItem="4jS-mq-TDp" secondAttribute="top" constant="20" id="Mxu-Ns-2mK"/>
+                            <constraint firstItem="7lX-1f-wsn" firstAttribute="centerX" secondItem="Ol4-rO-Mce" secondAttribute="centerX" id="PSm-Wx-Lo2"/>
+                            <constraint firstItem="4jS-mq-TDp" firstAttribute="trailing" secondItem="u8M-hx-36n" secondAttribute="trailing" constant="20" id="VqU-YF-Tjx"/>
+                            <constraint firstItem="u8M-hx-36n" firstAttribute="leading" secondItem="4jS-mq-TDp" secondAttribute="leading" constant="20" id="ZQU-YA-e4b"/>
+                            <constraint firstItem="4jS-mq-TDp" firstAttribute="bottom" secondItem="u8M-hx-36n" secondAttribute="bottom" constant="10" id="dfT-Gg-BAh"/>
+                            <constraint firstItem="u8M-hx-36n" firstAttribute="top" secondItem="7lX-1f-wsn" secondAttribute="bottom" constant="40" id="fZs-aM-VWj"/>
+                            <constraint firstItem="mjy-Rj-zl6" firstAttribute="top" secondItem="M2m-wJ-cjS" secondAttribute="bottom" constant="8" id="nm9-80-0CQ"/>
+                            <constraint firstItem="M2m-wJ-cjS" firstAttribute="leading" secondItem="ReX-QM-29w" secondAttribute="trailing" constant="8" id="wXW-gt-3ab"/>
+                            <constraint firstItem="mjy-Rj-zl6" firstAttribute="leading" secondItem="ReX-QM-29w" secondAttribute="trailing" constant="8" id="y3S-V1-0l5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4jS-mq-TDp"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="쿠폰함" image="coupons_icon.png" id="x48-D6-w9v"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDx-2E-dh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="351" y="-141"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coupons_icon.png" width="27" height="27"/>
+        <image name="whale_icon.png" width="352" height="282"/>
+    </resources>
 </document>

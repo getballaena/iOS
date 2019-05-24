@@ -10,20 +10,70 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--스탬프-->
         <scene sceneID="3qD-GX-yT8">
             <objects>
-                <viewController id="AX6-kv-OeU" sceneMemberID="viewController">
+                <viewController id="AX6-kv-OeU" customClass="StampTourVC" customModule="Get_Ballaena_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g98-9c-aNE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whale_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="YbI-Ms-O92">
+                                <rect key="frame" x="20" y="64" width="70" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Qg0-Te-Tgi"/>
+                                    <constraint firstAttribute="height" constant="60" id="eme-hD-S7A"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스탬프 투어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Die-HP-h9a">
+                                <rect key="frame" x="98" y="68" width="96" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지도를 통해 부스의 위치를 확인해보세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ima-GP-tUQ">
+                                <rect key="frame" x="98.000000000000014" y="102" width="241.33333333333337" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SxS-3w-uYT">
+                                <rect key="frame" x="0.0" y="190" width="375" height="539"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스탬프를 다 모으신 후 주최측에서 교환이 가능합니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Beg-Bv-Fzg">
+                                <rect key="frame" x="30.666666666666657" y="132" width="314" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Diu-Vp-1ck" firstAttribute="trailing" secondItem="SxS-3w-uYT" secondAttribute="trailing" id="H7K-da-UWq"/>
+                            <constraint firstItem="ima-GP-tUQ" firstAttribute="leading" secondItem="YbI-Ms-O92" secondAttribute="trailing" constant="8" id="Ha6-cD-mg2"/>
+                            <constraint firstItem="ima-GP-tUQ" firstAttribute="top" secondItem="Die-HP-h9a" secondAttribute="bottom" constant="8" id="Mhv-ol-pFj"/>
+                            <constraint firstItem="SxS-3w-uYT" firstAttribute="leading" secondItem="Diu-Vp-1ck" secondAttribute="leading" id="O5o-o8-wyj"/>
+                            <constraint firstItem="Beg-Bv-Fzg" firstAttribute="centerX" secondItem="g98-9c-aNE" secondAttribute="centerX" id="UHE-vH-EqU"/>
+                            <constraint firstItem="Beg-Bv-Fzg" firstAttribute="top" secondItem="YbI-Ms-O92" secondAttribute="bottom" constant="8" id="Ydf-DF-smp"/>
+                            <constraint firstItem="Die-HP-h9a" firstAttribute="top" secondItem="Diu-Vp-1ck" secondAttribute="top" constant="24" id="c2g-Gs-3ii"/>
+                            <constraint firstItem="YbI-Ms-O92" firstAttribute="leading" secondItem="Diu-Vp-1ck" secondAttribute="leading" constant="20" id="mU2-cE-OwV"/>
+                            <constraint firstItem="Die-HP-h9a" firstAttribute="leading" secondItem="YbI-Ms-O92" secondAttribute="trailing" constant="8" id="nkk-JS-bfe"/>
+                            <constraint firstItem="SxS-3w-uYT" firstAttribute="top" secondItem="Beg-Bv-Fzg" secondAttribute="bottom" constant="40" id="pGP-iE-Gei"/>
+                            <constraint firstItem="Diu-Vp-1ck" firstAttribute="bottom" secondItem="SxS-3w-uYT" secondAttribute="bottom" id="wlH-lX-JFG"/>
+                            <constraint firstItem="YbI-Ms-O92" firstAttribute="top" secondItem="Diu-Vp-1ck" secondAttribute="top" constant="20" id="xth-cL-qcL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Diu-Vp-1ck"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="스탬프" image="stamptour_icon.png" id="1yE-5Z-f3o"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5OB-Gf-BeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="-189"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stamptour_icon.png" width="27" height="27"/>
+        <image name="whale_icon.png" width="352" height="282"/>
+    </resources>
 </document>
