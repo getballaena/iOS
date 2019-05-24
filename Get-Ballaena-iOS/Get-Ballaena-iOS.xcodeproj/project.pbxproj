@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6839292022968E410098E185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839291F22968E410098E185 /* AppDelegate.swift */; };
-		6839292222968E410098E185 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839292122968E410098E185 /* ViewController.swift */; };
+		6839292222968E410098E185 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839292122968E410098E185 /* LoginVC.swift */; };
 		6839292522968E410098E185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6839292322968E410098E185 /* Main.storyboard */; };
 		6839292822968E410098E185 /* Get_Ballaena_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6839292622968E410098E185 /* Get_Ballaena_iOS.xcdatamodeld */; };
 		6839292A22968E430098E185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6839292922968E430098E185 /* Assets.xcassets */; };
@@ -16,6 +16,14 @@
 		6839293822968E430098E185 /* Get_Ballaena_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839293722968E430098E185 /* Get_Ballaena_iOSTests.swift */; };
 		6839294322968E430098E185 /* Get_Ballaena_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839294222968E430098E185 /* Get_Ballaena_iOSUITests.swift */; };
 		683929552296A9D10098E185 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 683929542296A9D10098E185 /* splash.png */; };
+		683929572296AC0A0098E185 /* whale_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 683929562296AC0A0098E185 /* whale_icon.png */; };
+		683929592296AC1F0098E185 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683929582296AC1F0098E185 /* Login.storyboard */; };
+		6839295B2296B7F60098E185 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839295A2296B7F60098E185 /* Extensions.swift */; };
+		6839295D229778400098E185 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6839295C229778400098E185 /* Game.storyboard */; };
+		6839295F2297784C0098E185 /* StampTour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6839295E2297784C0098E185 /* StampTour.storyboard */; };
+		68392961229778560098E185 /* Coupons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68392960229778560098E185 /* Coupons.storyboard */; };
+		68392963229778B10098E185 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68392962229778B10098E185 /* Shape.swift */; };
+		6839296522977A970098E185 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839296422977A970098E185 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +46,7 @@
 /* Begin PBXFileReference section */
 		6839291C22968E410098E185 /* Get-Ballaena-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Get-Ballaena-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6839291F22968E410098E185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6839292122968E410098E185 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6839292122968E410098E185 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		6839292422968E410098E185 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6839292722968E410098E185 /* Get_Ballaena_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Get_Ballaena_iOS.xcdatamodel; sourceTree = "<group>"; };
 		6839292922968E430098E185 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +59,14 @@
 		6839294222968E430098E185 /* Get_Ballaena_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get_Ballaena_iOSUITests.swift; sourceTree = "<group>"; };
 		6839294422968E430098E185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		683929542296A9D10098E185 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		683929562296AC0A0098E185 /* whale_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whale_icon.png; sourceTree = "<group>"; };
+		683929582296AC1F0098E185 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		6839295A2296B7F60098E185 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6839295C229778400098E185 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		6839295E2297784C0098E185 /* StampTour.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StampTour.storyboard; sourceTree = "<group>"; };
+		68392960229778560098E185 /* Coupons.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Coupons.storyboard; sourceTree = "<group>"; };
+		68392962229778B10098E185 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		6839296422977A970098E185 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +151,7 @@
 		683929502296A85A0098E185 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6839292122968E410098E185 /* ViewController.swift */,
+				6839292122968E410098E185 /* LoginVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -144,6 +160,10 @@
 			isa = PBXGroup;
 			children = (
 				6839292322968E410098E185 /* Main.storyboard */,
+				683929582296AC1F0098E185 /* Login.storyboard */,
+				6839295C229778400098E185 /* Game.storyboard */,
+				6839295E2297784C0098E185 /* StampTour.storyboard */,
+				68392960229778560098E185 /* Coupons.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -151,6 +171,9 @@
 		683929522296A87D0098E185 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				6839295A2296B7F60098E185 /* Extensions.swift */,
+				68392962229778B10098E185 /* Shape.swift */,
+				6839296422977A970098E185 /* Colors.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -158,6 +181,7 @@
 		683929532296A9AC0098E185 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				683929562296AC0A0098E185 /* whale_icon.png */,
 				683929542296A9D10098E185 /* splash.png */,
 			);
 			path = Image;
@@ -268,6 +292,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				683929552296A9D10098E185 /* splash.png in Resources */,
+				683929572296AC0A0098E185 /* whale_icon.png in Resources */,
+				68392961229778560098E185 /* Coupons.storyboard in Resources */,
+				6839295F2297784C0098E185 /* StampTour.storyboard in Resources */,
+				6839295D229778400098E185 /* Game.storyboard in Resources */,
+				683929592296AC1F0098E185 /* Login.storyboard in Resources */,
 				6839292D22968E430098E185 /* LaunchScreen.storyboard in Resources */,
 				6839292A22968E430098E185 /* Assets.xcassets in Resources */,
 				6839292522968E410098E185 /* Main.storyboard in Resources */,
@@ -295,9 +324,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68392963229778B10098E185 /* Shape.swift in Sources */,
+				6839296522977A970098E185 /* Colors.swift in Sources */,
 				6839292822968E410098E185 /* Get_Ballaena_iOS.xcdatamodeld in Sources */,
-				6839292222968E410098E185 /* ViewController.swift in Sources */,
+				6839292222968E410098E185 /* LoginVC.swift in Sources */,
 				6839292022968E410098E185 /* AppDelegate.swift in Sources */,
+				6839295B2296B7F60098E185 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
