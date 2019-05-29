@@ -46,16 +46,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLX-9w-fMq">
+                                <rect key="frame" x="280" y="634" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.3856886625" green="0.72744768859999998" blue="0.82746797800000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Acf-dC-LuZ"/>
+                                    <constraint firstAttribute="width" constant="60" id="m8c-yZ-Oub"/>
+                                </constraints>
+                                <state key="normal" image="camera.png"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Diu-Vp-1ck" firstAttribute="trailing" secondItem="SxS-3w-uYT" secondAttribute="trailing" id="H7K-da-UWq"/>
                             <constraint firstItem="ima-GP-tUQ" firstAttribute="leading" secondItem="YbI-Ms-O92" secondAttribute="trailing" constant="8" id="Ha6-cD-mg2"/>
+                            <constraint firstItem="Diu-Vp-1ck" firstAttribute="bottom" secondItem="dLX-9w-fMq" secondAttribute="bottom" constant="35" id="IE3-bs-hjg"/>
                             <constraint firstItem="ima-GP-tUQ" firstAttribute="top" secondItem="Die-HP-h9a" secondAttribute="bottom" constant="8" id="Mhv-ol-pFj"/>
                             <constraint firstItem="SxS-3w-uYT" firstAttribute="leading" secondItem="Diu-Vp-1ck" secondAttribute="leading" id="O5o-o8-wyj"/>
                             <constraint firstItem="Beg-Bv-Fzg" firstAttribute="centerX" secondItem="g98-9c-aNE" secondAttribute="centerX" id="UHE-vH-EqU"/>
                             <constraint firstItem="Beg-Bv-Fzg" firstAttribute="top" secondItem="YbI-Ms-O92" secondAttribute="bottom" constant="8" id="Ydf-DF-smp"/>
                             <constraint firstItem="Die-HP-h9a" firstAttribute="top" secondItem="Diu-Vp-1ck" secondAttribute="top" constant="24" id="c2g-Gs-3ii"/>
+                            <constraint firstItem="Diu-Vp-1ck" firstAttribute="trailing" secondItem="dLX-9w-fMq" secondAttribute="trailing" constant="35" id="fYl-27-7TF"/>
                             <constraint firstItem="YbI-Ms-O92" firstAttribute="leading" secondItem="Diu-Vp-1ck" secondAttribute="leading" constant="20" id="mU2-cE-OwV"/>
                             <constraint firstItem="Die-HP-h9a" firstAttribute="leading" secondItem="YbI-Ms-O92" secondAttribute="trailing" constant="8" id="nkk-JS-bfe"/>
                             <constraint firstItem="SxS-3w-uYT" firstAttribute="top" secondItem="Beg-Bv-Fzg" secondAttribute="bottom" constant="40" id="pGP-iE-Gei"/>
@@ -73,6 +89,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera.png" width="24" height="24"/>
         <image name="stamptour_icon.png" width="27" height="27"/>
         <image name="whale_icon.png" width="352" height="282"/>
     </resources>
