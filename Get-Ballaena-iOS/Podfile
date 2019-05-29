@@ -1,0 +1,24 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Get-Ballaena-iOS' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+	pod 'RxSwift',    '~> 4.0'
+    	pod 'RxCocoa',    '~> 4.0'
+	pod 'RxAlamofire'
+
+  # Pods for Get-Ballaena-iOS
+
+  target 'Get-Ballaena-iOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Get-Ballaena-iOSUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

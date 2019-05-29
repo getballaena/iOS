@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4440614B8363C94429659499 /* Pods_Get_Ballaena_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB55E33AF056CCA6008B81 /* Pods_Get_Ballaena_iOSTests.framework */; };
+		4E4DE5723DDA2A9E58D975EA /* Pods_Get_Ballaena_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755CEE89A5A27526A2E6F913 /* Pods_Get_Ballaena_iOSUITests.framework */; };
 		6839292022968E410098E185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839291F22968E410098E185 /* AppDelegate.swift */; };
 		6839292222968E410098E185 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839292122968E410098E185 /* LoginVC.swift */; };
 		6839292522968E410098E185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6839292322968E410098E185 /* Main.storyboard */; };
@@ -24,12 +26,23 @@
 		68392961229778560098E185 /* Coupons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68392960229778560098E185 /* Coupons.storyboard */; };
 		68392963229778B10098E185 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68392962229778B10098E185 /* Shape.swift */; };
 		6839296522977A970098E185 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839296422977A970098E185 /* Colors.swift */; };
+		684CDBAD229E0F2D00EA1229 /* TeamPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684CDBAC229E0F2D00EA1229 /* TeamPath.swift */; };
+		684CDBAF229E106000EA1229 /* GamePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684CDBAE229E106000EA1229 /* GamePath.swift */; };
+		684CDBB1229E109C00EA1229 /* CouponPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684CDBB0229E109C00EA1229 /* CouponPath.swift */; };
+		684CDBB4229E16CA00EA1229 /* wrong_answer.png in Resources */ = {isa = PBXBuildFile; fileRef = 684CDBB3229E16CA00EA1229 /* wrong_answer.png */; };
+		689738F7229E18E200B39854 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 689738F6229E18E200B39854 /* camera.png */; };
 		68E0323122978457003FDE8B /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E0323022978457003FDE8B /* GameVC.swift */; };
 		68E0323322978468003FDE8B /* StampTourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E0323222978468003FDE8B /* StampTourVC.swift */; };
 		68E032362297847D003FDE8B /* CouponsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E032352297847D003FDE8B /* CouponsVC.swift */; };
 		68E0323822978841003FDE8B /* game_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 68E0323722978841003FDE8B /* game_icon.png */; };
 		68E0323A22978873003FDE8B /* stamptour_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 68E0323922978873003FDE8B /* stamptour_icon.png */; };
 		68E0323C22978899003FDE8B /* coupons_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 68E0323B22978899003FDE8B /* coupons_icon.png */; };
+		68E032402297D4B4003FDE8B /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E0323F2297D4B4003FDE8B /* Client.swift */; };
+		68E032422297D5E8003FDE8B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E032412297D5E8003FDE8B /* API.swift */; };
+		68E032452297DF28003FDE8B /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E032442297DF28003FDE8B /* APIProtocol.swift */; };
+		68E032472297DF8A003FDE8B /* AuthPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E032462297DF8A003FDE8B /* AuthPath.swift */; };
+		68E032492297E1F5003FDE8B /* StampPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E032482297E1F5003FDE8B /* StampPath.swift */; };
+		88DB19A319852070F9E33497 /* Pods_Get_Ballaena_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6317CC926F169AE3835FF8AF /* Pods_Get_Ballaena_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +63,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		183B7F2C0B5A0E74C301A768 /* Pods-Get-Ballaena-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOSUITests/Pods-Get-Ballaena-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2071E59E5ED1E0BFA425BDDB /* Pods-Get-Ballaena-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOS/Pods-Get-Ballaena-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		23370C1A9EE52D4DBA7DCD27 /* Pods-Get-Ballaena-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOSTests/Pods-Get-Ballaena-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		6317CC926F169AE3835FF8AF /* Pods_Get_Ballaena_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_Ballaena_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6839291C22968E410098E185 /* Get-Ballaena-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Get-Ballaena-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6839291F22968E410098E185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6839292122968E410098E185 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -73,12 +90,27 @@
 		68392960229778560098E185 /* Coupons.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Coupons.storyboard; sourceTree = "<group>"; };
 		68392962229778B10098E185 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		6839296422977A970098E185 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		684CDBAC229E0F2D00EA1229 /* TeamPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPath.swift; sourceTree = "<group>"; };
+		684CDBAE229E106000EA1229 /* GamePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePath.swift; sourceTree = "<group>"; };
+		684CDBB0229E109C00EA1229 /* CouponPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponPath.swift; sourceTree = "<group>"; };
+		684CDBB3229E16CA00EA1229 /* wrong_answer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wrong_answer.png; sourceTree = "<group>"; };
+		689738F6229E18E200B39854 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		68E0323022978457003FDE8B /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		68E0323222978468003FDE8B /* StampTourVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampTourVC.swift; sourceTree = "<group>"; };
 		68E032352297847D003FDE8B /* CouponsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsVC.swift; sourceTree = "<group>"; };
 		68E0323722978841003FDE8B /* game_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game_icon.png; sourceTree = "<group>"; };
 		68E0323922978873003FDE8B /* stamptour_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamptour_icon.png; sourceTree = "<group>"; };
 		68E0323B22978899003FDE8B /* coupons_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coupons_icon.png; sourceTree = "<group>"; };
+		68E0323F2297D4B4003FDE8B /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		68E032412297D5E8003FDE8B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		68E032442297DF28003FDE8B /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
+		68E032462297DF8A003FDE8B /* AuthPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPath.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		68E032482297E1F5003FDE8B /* StampPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampPath.swift; sourceTree = "<group>"; };
+		755CEE89A5A27526A2E6F913 /* Pods_Get_Ballaena_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_Ballaena_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B016F5CF309273541660EE35 /* Pods-Get-Ballaena-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOSUITests/Pods-Get-Ballaena-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C9BB55E33AF056CCA6008B81 /* Pods_Get_Ballaena_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_Ballaena_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3BD8BF3C2BB298F66B10D2 /* Pods-Get-Ballaena-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOS/Pods-Get-Ballaena-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		F15225CF150BD117AD3A7C7F /* Pods-Get-Ballaena-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOSTests/Pods-Get-Ballaena-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88DB19A319852070F9E33497 /* Pods_Get_Ballaena_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4440614B8363C94429659499 /* Pods_Get_Ballaena_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E4DE5723DDA2A9E58D975EA /* Pods_Get_Ballaena_iOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +148,8 @@
 				6839293622968E430098E185 /* Get-Ballaena-iOSTests */,
 				6839294122968E430098E185 /* Get-Ballaena-iOSUITests */,
 				6839291D22968E410098E185 /* Products */,
+				9467B6600150F324696DB8B6 /* Pods */,
+				D97EF807793568A133500AB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +166,7 @@
 		6839291E22968E410098E185 /* Get-Ballaena-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				689738F8229E1DC700B39854 /* ViewModel */,
 				68E0323E2297C21D003FDE8B /* Network */,
 				683929532296A9AC0098E185 /* Image */,
 				683929522296A87D0098E185 /* Util */,
@@ -164,8 +202,8 @@
 		683929502296A85A0098E185 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				684CDBB2229E11D000EA1229 /* Login */,
 				68E0322F2297843C003FDE8B /* Main */,
-				6839292122968E410098E185 /* LoginVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -195,6 +233,8 @@
 		683929532296A9AC0098E185 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				689738F6229E18E200B39854 /* camera.png */,
+				684CDBB3229E16CA00EA1229 /* wrong_answer.png */,
 				68E0323B22978899003FDE8B /* coupons_icon.png */,
 				68E0323922978873003FDE8B /* stamptour_icon.png */,
 				68E0323722978841003FDE8B /* game_icon.png */,
@@ -202,6 +242,21 @@
 				683929542296A9D10098E185 /* splash.png */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		684CDBB2229E11D000EA1229 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6839292122968E410098E185 /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		689738F8229E1DC700B39854 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		68E0322F2297843C003FDE8B /* Main */ = {
@@ -217,8 +272,47 @@
 		68E0323E2297C21D003FDE8B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				68E032432297DF16003FDE8B /* Path */,
+				68E0323F2297D4B4003FDE8B /* Client.swift */,
+				68E032412297D5E8003FDE8B /* API.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		68E032432297DF16003FDE8B /* Path */ = {
+			isa = PBXGroup;
+			children = (
+				68E032442297DF28003FDE8B /* APIProtocol.swift */,
+				68E032462297DF8A003FDE8B /* AuthPath.swift */,
+				68E032482297E1F5003FDE8B /* StampPath.swift */,
+				684CDBAC229E0F2D00EA1229 /* TeamPath.swift */,
+				684CDBAE229E106000EA1229 /* GamePath.swift */,
+				684CDBB0229E109C00EA1229 /* CouponPath.swift */,
+			);
+			path = Path;
+			sourceTree = "<group>";
+		};
+		9467B6600150F324696DB8B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2071E59E5ED1E0BFA425BDDB /* Pods-Get-Ballaena-iOS.debug.xcconfig */,
+				CD3BD8BF3C2BB298F66B10D2 /* Pods-Get-Ballaena-iOS.release.xcconfig */,
+				F15225CF150BD117AD3A7C7F /* Pods-Get-Ballaena-iOSTests.debug.xcconfig */,
+				23370C1A9EE52D4DBA7DCD27 /* Pods-Get-Ballaena-iOSTests.release.xcconfig */,
+				183B7F2C0B5A0E74C301A768 /* Pods-Get-Ballaena-iOSUITests.debug.xcconfig */,
+				B016F5CF309273541660EE35 /* Pods-Get-Ballaena-iOSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D97EF807793568A133500AB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6317CC926F169AE3835FF8AF /* Pods_Get_Ballaena_iOS.framework */,
+				C9BB55E33AF056CCA6008B81 /* Pods_Get_Ballaena_iOSTests.framework */,
+				755CEE89A5A27526A2E6F913 /* Pods_Get_Ballaena_iOSUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +322,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6839294722968E430098E185 /* Build configuration list for PBXNativeTarget "Get-Ballaena-iOS" */;
 			buildPhases = (
+				BC4A9DEAC99CB0788182A0B8 /* [CP] Check Pods Manifest.lock */,
 				6839291822968E410098E185 /* Sources */,
 				6839291922968E410098E185 /* Frameworks */,
 				6839291A22968E410098E185 /* Resources */,
+				48CF2B64B9436808F8D1F2DA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,6 +341,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6839294A22968E430098E185 /* Build configuration list for PBXNativeTarget "Get-Ballaena-iOSTests" */;
 			buildPhases = (
+				2B6F4619894F9A8C5E344761 /* [CP] Check Pods Manifest.lock */,
 				6839292F22968E430098E185 /* Sources */,
 				6839293022968E430098E185 /* Frameworks */,
 				6839293122968E430098E185 /* Resources */,
@@ -263,6 +360,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6839294D22968E430098E185 /* Build configuration list for PBXNativeTarget "Get-Ballaena-iOSUITests" */;
 			buildPhases = (
+				A2F3261B51AD6E5C098FAECE /* [CP] Check Pods Manifest.lock */,
 				6839293A22968E430098E185 /* Sources */,
 				6839293B22968E430098E185 /* Frameworks */,
 				6839293C22968E430098E185 /* Resources */,
@@ -329,6 +427,7 @@
 				683929572296AC0A0098E185 /* whale_icon.png in Resources */,
 				68392961229778560098E185 /* Coupons.storyboard in Resources */,
 				6839295F2297784C0098E185 /* StampTour.storyboard in Resources */,
+				689738F7229E18E200B39854 /* camera.png in Resources */,
 				6839295D229778400098E185 /* Game.storyboard in Resources */,
 				683929592296AC1F0098E185 /* Login.storyboard in Resources */,
 				68E0323C22978899003FDE8B /* coupons_icon.png in Resources */,
@@ -337,6 +436,7 @@
 				6839292A22968E430098E185 /* Assets.xcassets in Resources */,
 				68E0323822978841003FDE8B /* game_icon.png in Resources */,
 				6839292522968E410098E185 /* Main.storyboard in Resources */,
+				684CDBB4229E16CA00EA1229 /* wrong_answer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,19 +456,124 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B6F4619894F9A8C5E344761 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Get-Ballaena-iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48CF2B64B9436808F8D1F2DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Get-Ballaena-iOS/Pods-Get-Ballaena-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Get-Ballaena-iOS/Pods-Get-Ballaena-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2F3261B51AD6E5C098FAECE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Get-Ballaena-iOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC4A9DEAC99CB0788182A0B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Get-Ballaena-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6839291822968E410098E185 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				684CDBAF229E106000EA1229 /* GamePath.swift in Sources */,
+				68E032422297D5E8003FDE8B /* API.swift in Sources */,
+				68E032472297DF8A003FDE8B /* AuthPath.swift in Sources */,
 				68392963229778B10098E185 /* Shape.swift in Sources */,
 				6839296522977A970098E185 /* Colors.swift in Sources */,
 				6839292822968E410098E185 /* Get_Ballaena_iOS.xcdatamodeld in Sources */,
+				68E032452297DF28003FDE8B /* APIProtocol.swift in Sources */,
 				6839292222968E410098E185 /* LoginVC.swift in Sources */,
 				68E0323322978468003FDE8B /* StampTourVC.swift in Sources */,
 				68E0323122978457003FDE8B /* GameVC.swift in Sources */,
 				6839292022968E410098E185 /* AppDelegate.swift in Sources */,
+				684CDBB1229E109C00EA1229 /* CouponPath.swift in Sources */,
+				684CDBAD229E0F2D00EA1229 /* TeamPath.swift in Sources */,
+				68E032492297E1F5003FDE8B /* StampPath.swift in Sources */,
 				6839295B2296B7F60098E185 /* Extensions.swift in Sources */,
+				68E032402297D4B4003FDE8B /* Client.swift in Sources */,
 				68E032362297847D003FDE8B /* CouponsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +747,7 @@
 		};
 		6839294822968E430098E185 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2071E59E5ED1E0BFA425BDDB /* Pods-Get-Ballaena-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -560,6 +766,7 @@
 		};
 		6839294922968E430098E185 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD3BD8BF3C2BB298F66B10D2 /* Pods-Get-Ballaena-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -578,6 +785,7 @@
 		};
 		6839294B22968E430098E185 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F15225CF150BD117AD3A7C7F /* Pods-Get-Ballaena-iOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -599,6 +807,7 @@
 		};
 		6839294C22968E430098E185 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23370C1A9EE52D4DBA7DCD27 /* Pods-Get-Ballaena-iOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -620,6 +829,7 @@
 		};
 		6839294E22968E430098E185 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 183B7F2C0B5A0E74C301A768 /* Pods-Get-Ballaena-iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -640,6 +850,7 @@
 		};
 		6839294F22968E430098E185 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B016F5CF309273541660EE35 /* Pods-Get-Ballaena-iOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
