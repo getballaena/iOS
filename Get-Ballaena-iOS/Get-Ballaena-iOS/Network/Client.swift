@@ -13,6 +13,7 @@ import RxCocoa
 
 protocol ClientType {
     func get(path: String, params: Parameters?, header : Header) -> Observable<(HTTPURLResponse,Data)>
+    
     func post(path: String, params: Parameters?, header : Header) -> Observable<(HTTPURLResponse,Data)>
     
     func delete(path: String, params: Parameters?, header : Header) -> Observable<(HTTPURLResponse,Data)>
