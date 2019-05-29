@@ -98,7 +98,9 @@
                         <viewLayoutGuide key="safeArea" id="Jxq-0P-Dcc"/>
                     </view>
                     <connections>
-                        <segue destination="KPK-Wa-uzK" kind="show" id="mkx-ex-Qj7"/>
+                        <outlet property="registerBtn" destination="Mhk-C4-oTk" id="U7Z-tT-COM"/>
+                        <outlet property="usernameInput" destination="y7b-Nh-SMP" id="emF-Qx-wHu"/>
+                        <segue destination="KPK-Wa-uzK" kind="show" identifier="toMain" id="mkx-ex-Qj7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sqM-lS-fwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
