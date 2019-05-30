@@ -11,3 +11,4 @@ import Foundation
 protocol API {
     func Path() -> String
 }
+
