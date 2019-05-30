@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
 
 extension UITextField{
     @IBInspectable var placeHolderColor: UIColor? {
@@ -45,3 +47,11 @@ extension UIViewController {
     }
     
 }
+
+extension Reactive where Base: UIViewController {
+    var viewWillAppear: ControlEvent<Void> {
+        let source = self.methodInvoked(#selector(Base.viewWillAppear(_:))).map { _ in }
+        return ControlEvent(events: source)
+    }
+}
+
