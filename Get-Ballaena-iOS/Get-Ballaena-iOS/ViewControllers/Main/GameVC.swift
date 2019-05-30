@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class GameVC: UIViewController {
+    
+    
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = true
     }

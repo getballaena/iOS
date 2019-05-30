@@ -10,11 +10,12 @@ import Foundation
 
 enum TeamPath: API {
    
-    case team
+    case team, check
     
     func Path() -> String {
         switch self {
         case .team: return "team"
+        case .check: return "team/check"
         }
     }
     
