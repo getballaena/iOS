@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class StampTourVC: UIViewController {
+    
     override func viewDidLoad() {
     }
 }

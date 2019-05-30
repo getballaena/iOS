@@ -25,8 +25,8 @@
                                     <constraint firstAttribute="width" constant="70" id="ooP-1C-9qq"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스탬프 투어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2m-wJ-cjS">
-                                <rect key="frame" x="98" y="68" width="96" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="울산고래축제 쿠폰함" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2m-wJ-cjS">
+                                <rect key="frame" x="98" y="68" width="168" height="26"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,43 +47,38 @@
                                 <rect key="frame" x="20" y="190" width="335" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3j8-Gp-JJ8">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CouponCell" rowHeight="80" id="3j8-Gp-JJ8" customClass="CouponCell" customModule="Get_Ballaena_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3j8-Gp-JJ8" id="Lmy-oK-XwY">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="99.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="79.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부스 참여 우수자 쿠폰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBR-ki-uzb">
-                                                    <rect key="frame" x="20" y="16" width="170" height="24"/>
+                                                    <rect key="frame" x="20" y="15.999999999999996" width="170" height="47.666666666666657"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에베벱레베레베ㅔ레베" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4f-6Y-cB5">
-                                                    <rect key="frame" x="20" y="45" width="148" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="G4f-6Y-cB5" firstAttribute="leading" secondItem="Lmy-oK-XwY" secondAttribute="leadingMargin" constant="5" id="9Vr-t7-Xgl"/>
+                                                <constraint firstItem="cBR-ki-uzb" firstAttribute="centerY" secondItem="Lmy-oK-XwY" secondAttribute="centerY" id="JB0-4P-KmK"/>
                                                 <constraint firstItem="cBR-ki-uzb" firstAttribute="top" secondItem="Lmy-oK-XwY" secondAttribute="topMargin" constant="5" id="U9F-qW-bk3"/>
                                                 <constraint firstItem="cBR-ki-uzb" firstAttribute="leading" secondItem="Lmy-oK-XwY" secondAttribute="leadingMargin" constant="5" id="fKZ-ZX-ROg"/>
-                                                <constraint firstItem="G4f-6Y-cB5" firstAttribute="top" secondItem="cBR-ki-uzb" secondAttribute="bottom" constant="5" id="tsP-02-dEk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.makesToBounds" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <integer key="value" value="2"/>
+                                                <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderColor" value="UIColor.black"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="couponName" destination="cBR-ki-uzb" id="JSD-hC-K9y"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -107,6 +102,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="쿠폰함" image="coupons_icon.png" id="x48-D6-w9v"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="couponList" destination="u8M-hx-36n" id="ZpQ-Ve-JMC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDx-2E-dh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
