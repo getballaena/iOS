@@ -14,8 +14,8 @@ enum GamePath: API {
     
     func Path() -> String {
         switch self {
-        case .map: return "/map"
-        case .solve(let boothName): return "/solve/\(boothName)"
+        case .map: return "map"
+        case .solve(let boothName): return "solve/\(boothName)"
         }
     }
     

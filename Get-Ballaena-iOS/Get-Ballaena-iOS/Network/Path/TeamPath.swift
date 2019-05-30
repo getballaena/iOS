@@ -14,7 +14,7 @@ enum TeamPath: API {
     
     func Path() -> String {
         switch self {
-        case .team: return "/team"
+        case .team: return "team"
         }
     }
     

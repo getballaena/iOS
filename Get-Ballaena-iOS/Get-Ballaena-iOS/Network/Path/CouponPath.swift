@@ -14,7 +14,7 @@ enum CouponPath: API {
     
     func Path() -> String {
         switch self {
-        case .coupon: return "/coupon"
+        case .coupon: return "coupon"
         }
     }
     
