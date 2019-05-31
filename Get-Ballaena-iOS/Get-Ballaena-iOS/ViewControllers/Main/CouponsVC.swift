@@ -84,13 +84,13 @@ extension CouponsVC {
                 guard let `self` = self else { return }
                 switch statusCode{
                 case 200:
-                    let indexPath = self.viewModel.cellSelected.value
+//                    let indexPath = self.viewModel.cellSelected.value
                     self.viewModel.couponList.drive(onNext: { datas in
 //                        datas[indexPath.section].model.remove(at: indexPath.section)
 //                        datas[indexPath.section].items.remove(at: indexPath.section)
                     }).disposed(by: self.disposeBag)
                     
-                    self.couponList?.deleteSections(IndexSet(arrayLiteral: indexPath.section), with: .automatic)
+//                    self.couponList?.deleteSections(IndexSet(arrayLiteral: indexPath.section), with: .automatic)
                 case 204: self.showToast(msg: "없는 쿠폰입니다.")
                 case 403: self.showToast(msg: "잘못된 스태프코드 입니다.")
                 case 400: self.showToast(msg: "잘못된 쿠폰 아이디")
