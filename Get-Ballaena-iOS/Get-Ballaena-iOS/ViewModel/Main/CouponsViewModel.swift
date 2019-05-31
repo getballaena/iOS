@@ -15,7 +15,7 @@ class CouponsViewModel {
     
     //Input
     let ready = PublishRelay<Void>()
-    let cellSelected = BehaviorRelay<IndexPath>(value: IndexPath(row: 0, section: 0))
+    let cellSelected = PublishRelay<IndexPath>()
     let adminID = BehaviorRelay<String>(value: "")
     let couponUseDidClicked = PublishRelay<Void>()
     
