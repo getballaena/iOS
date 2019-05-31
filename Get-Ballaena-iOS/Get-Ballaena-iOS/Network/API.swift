@@ -21,7 +21,7 @@ protocol Stamp {
 }
 
 protocol Game {
-    func teamCheck() -> Observable<String>
+    func teamCheck() -> Observable<Int>
     func joinTeam(teamCode: String) -> Observable<Int>
     func gameMap() -> Observable<(Int,Data)>
     func gameProblems(boothName: String) -> Observable<(Int,Data)>
@@ -61,6 +61,7 @@ class StampApi: Stamp {
                           params: nil,
                           header: Header.Authorization)
             .map { res, data -> (Int, Data) in
+                print(res.statusCode)
                 return (res.statusCode, data)
             }
     }
@@ -70,35 +71,24 @@ class StampApi: Stamp {
                            params: nil,
                            header: Header.Authorization)
             .map { res, data -> Int in
-                res.statusCode
+                return res.statusCode
             }
     }
 }
 
 class GameApi: Game {
-    func teamCheck() -> Observable<String> {
+    func teamCheck() -> Observable<Int> {
         return client.get(path: TeamPath.check.Path(),
                           params: nil,
                           header: Header.Authorization)
-            .map { res, data  -> String in
-                switch res.statusCode{
-                case 200:
-                    guard let response = try? JSONDecoder().decode(TeamModel.self, from: data) else {
-                        return ""
-                    }
-                case 403:
-                    return "가입 안된 유저"
-                case 404:
-                    return "팀이 없는 유저"
-                default: return "nil"
+            .map { res, data  -> Int in
+                    return res.statusCode
                 }
-                return ""
         }
-    }
     
     func joinTeam(teamCode: String) -> Observable<Int> {
         return client.post(path: TeamPath.team.Path(),
-                           params: nil,
+                           params: ["joinCode" : teamCode],
                            header: Header.Authorization)
             .map { res, data  -> Int in
                 return res.statusCode
@@ -120,7 +110,7 @@ class GameApi: Game {
                           header: Header.Authorization)
             .map { res, data -> (Int, Data) in
                 return (res.statusCode, data)
-            }
+        }
     }
     
     func solveProblem(boothName: String, problemId: String, answer: String) -> Observable<Int> {
@@ -129,10 +119,11 @@ class GameApi: Game {
                                     "answer" : answer], header: Header.Authorization)
             .map { res, data -> Int in
                 return res.statusCode
-            }
+        }
     }
 }
     
+
     class CouponsApi: Coupons {
         func couponList() -> Observable<[CouponModel]> {
             return client.get(path: CouponPath.coupon.Path(),
