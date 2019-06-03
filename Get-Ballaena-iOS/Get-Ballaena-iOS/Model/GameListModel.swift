@@ -9,7 +9,9 @@
 import Foundation
 
 struct GameListModel: Codable {
-    let endTimeTimestamp: String
+    let endTimeTimestamp: Int
     let map: [GameMapModel]
     let myTeam: String
+    
+    
 }

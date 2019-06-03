@@ -32,13 +32,19 @@
 		683DE12F22A0B26300E46616 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683DE12E22A0B26300E46616 /* GameViewModel.swift */; };
 		683DE13122A0BE6400E46616 /* GameListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683DE13022A0BE6400E46616 /* GameListModel.swift */; };
 		683DE13322A0C07900E46616 /* GameMapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683DE13222A0C07900E46616 /* GameMapModel.swift */; };
+		6845A10622A3EB0D0065171C /* ProblemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6845A10522A3EB0D0065171C /* ProblemModel.swift */; };
+		6845A10822A3EBED0065171C /* SolveProblemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6845A10722A3EBED0065171C /* SolveProblemVC.swift */; };
+		6845A10A22A3FEB40065171C /* DelayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6845A10922A3FEB40065171C /* DelayModel.swift */; };
+		6845A10C22A41B400065171C /* CorrectAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6845A10B22A41B400065171C /* CorrectAnswerVC.swift */; };
+		6845A10E22A41B580065171C /* WrongAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6845A10D22A41B580065171C /* WrongAnswerVC.swift */; };
+		6846FD7522A53EA1007ABF7A /* correct_answer.png in Resources */ = {isa = PBXBuildFile; fileRef = 6846FD7422A53EA0007ABF7A /* correct_answer.png */; };
 		684CDBAD229E0F2D00EA1229 /* TeamPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684CDBAC229E0F2D00EA1229 /* TeamPath.swift */; };
 		684CDBAF229E106000EA1229 /* GamePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684CDBAE229E106000EA1229 /* GamePath.swift */; };
 		684CDBB1229E109C00EA1229 /* CouponPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684CDBB0229E109C00EA1229 /* CouponPath.swift */; };
 		684CDBB4229E16CA00EA1229 /* wrong_answer.png in Resources */ = {isa = PBXBuildFile; fileRef = 684CDBB3229E16CA00EA1229 /* wrong_answer.png */; };
 		68819DDC22A10110001C023D /* StampViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68819DDB22A10110001C023D /* StampViewModel.swift */; };
 		68819DDE22A101A6001C023D /* StampModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68819DDD22A101A6001C023D /* StampModel.swift */; };
-		68819DE022A13577001C023D /* QRcodeReaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68819DDF22A13577001C023D /* QRcodeReaderVC.swift */; };
+		68819DE022A13577001C023D /* QRCodeReaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68819DDF22A13577001C023D /* QRCodeReaderVC.swift */; };
 		689738F7229E18E200B39854 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 689738F6229E18E200B39854 /* camera.png */; };
 		689738FB229E213F00B39854 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689738FA229E213F00B39854 /* LoginViewModel.swift */; };
 		68973901229E4BA700B39854 /* CouponsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68973900229E4BA700B39854 /* CouponsViewModel.swift */; };
@@ -109,13 +115,19 @@
 		683DE12E22A0B26300E46616 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		683DE13022A0BE6400E46616 /* GameListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListModel.swift; sourceTree = "<group>"; };
 		683DE13222A0C07900E46616 /* GameMapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMapModel.swift; sourceTree = "<group>"; };
+		6845A10522A3EB0D0065171C /* ProblemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemModel.swift; sourceTree = "<group>"; };
+		6845A10722A3EBED0065171C /* SolveProblemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolveProblemVC.swift; sourceTree = "<group>"; };
+		6845A10922A3FEB40065171C /* DelayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayModel.swift; sourceTree = "<group>"; };
+		6845A10B22A41B400065171C /* CorrectAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerVC.swift; sourceTree = "<group>"; };
+		6845A10D22A41B580065171C /* WrongAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerVC.swift; sourceTree = "<group>"; };
+		6846FD7422A53EA0007ABF7A /* correct_answer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correct_answer.png; sourceTree = "<group>"; };
 		684CDBAC229E0F2D00EA1229 /* TeamPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPath.swift; sourceTree = "<group>"; };
 		684CDBAE229E106000EA1229 /* GamePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePath.swift; sourceTree = "<group>"; };
 		684CDBB0229E109C00EA1229 /* CouponPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponPath.swift; sourceTree = "<group>"; };
 		684CDBB3229E16CA00EA1229 /* wrong_answer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wrong_answer.png; sourceTree = "<group>"; };
 		68819DDB22A10110001C023D /* StampViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampViewModel.swift; sourceTree = "<group>"; };
 		68819DDD22A101A6001C023D /* StampModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampModel.swift; sourceTree = "<group>"; };
-		68819DDF22A13577001C023D /* QRcodeReaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRcodeReaderVC.swift; sourceTree = "<group>"; };
+		68819DDF22A13577001C023D /* QRCodeReaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderVC.swift; sourceTree = "<group>"; };
 		689738F6229E18E200B39854 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		689738FA229E213F00B39854 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		68973900229E4BA700B39854 /* CouponsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsViewModel.swift; sourceTree = "<group>"; };
@@ -231,7 +243,7 @@
 			children = (
 				684CDBB2229E11D000EA1229 /* Login */,
 				68E0322F2297843C003FDE8B /* Main */,
-				68819DDF22A13577001C023D /* QRcodeReaderVC.swift */,
+				68819DDF22A13577001C023D /* QRCodeReaderVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -261,6 +273,7 @@
 		683929532296A9AC0098E185 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				6846FD7422A53EA0007ABF7A /* correct_answer.png */,
 				689738F6229E18E200B39854 /* camera.png */,
 				684CDBB3229E16CA00EA1229 /* wrong_answer.png */,
 				68E0323B22978899003FDE8B /* coupons_icon.png */,
@@ -315,6 +328,8 @@
 				683DE13022A0BE6400E46616 /* GameListModel.swift */,
 				683DE13222A0C07900E46616 /* GameMapModel.swift */,
 				68819DDD22A101A6001C023D /* StampModel.swift */,
+				6845A10522A3EB0D0065171C /* ProblemModel.swift */,
+				6845A10922A3FEB40065171C /* DelayModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -359,6 +374,9 @@
 				68E79B2B22A0127D006931A6 /* JoinTeamVC.swift */,
 				683DE12922A0B00A00E46616 /* BoothListVC.swift */,
 				683DE12B22A0B1A800E46616 /* NotStatedGameVC.swift */,
+				6845A10722A3EBED0065171C /* SolveProblemVC.swift */,
+				6845A10B22A41B400065171C /* CorrectAnswerVC.swift */,
+				6845A10D22A41B580065171C /* WrongAnswerVC.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -505,6 +523,7 @@
 				68E0323A22978873003FDE8B /* stamptour_icon.png in Resources */,
 				6839292D22968E430098E185 /* LaunchScreen.storyboard in Resources */,
 				6839292A22968E430098E185 /* Assets.xcassets in Resources */,
+				6846FD7522A53EA1007ABF7A /* correct_answer.png in Resources */,
 				68E0323822978841003FDE8B /* game_icon.png in Resources */,
 				6839292522968E410098E185 /* Main.storyboard in Resources */,
 				684CDBB4229E16CA00EA1229 /* wrong_answer.png in Resources */,
@@ -634,15 +653,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				684CDBAF229E106000EA1229 /* GamePath.swift in Sources */,
+				6845A10C22A41B400065171C /* CorrectAnswerVC.swift in Sources */,
 				683DE12C22A0B1A800E46616 /* NotStatedGameVC.swift in Sources */,
+				6845A10822A3EBED0065171C /* SolveProblemVC.swift in Sources */,
 				68E79B2C22A0127D006931A6 /* JoinTeamVC.swift in Sources */,
 				683DE12F22A0B26300E46616 /* GameViewModel.swift in Sources */,
 				683DE12A22A0B00A00E46616 /* BoothListVC.swift in Sources */,
 				68973904229E4BD200B39854 /* CouponModel.swift in Sources */,
 				68E032422297D5E8003FDE8B /* API.swift in Sources */,
-				68819DE022A13577001C023D /* QRcodeReaderVC.swift in Sources */,
+				68819DE022A13577001C023D /* QRCodeReaderVC.swift in Sources */,
 				68E032472297DF8A003FDE8B /* AuthPath.swift in Sources */,
 				68819DDC22A10110001C023D /* StampViewModel.swift in Sources */,
+				6845A10E22A41B580065171C /* WrongAnswerVC.swift in Sources */,
 				68392963229778B10098E185 /* Shape.swift in Sources */,
 				6839296522977A970098E185 /* Colors.swift in Sources */,
 				68819DDE22A101A6001C023D /* StampModel.swift in Sources */,
@@ -653,9 +675,11 @@
 				689738FB229E213F00B39854 /* LoginViewModel.swift in Sources */,
 				68E0323322978468003FDE8B /* StampTourVC.swift in Sources */,
 				68269AFB229FF09300869C90 /* TeamModel.swift in Sources */,
+				6845A10A22A3FEB40065171C /* DelayModel.swift in Sources */,
 				68E0323122978457003FDE8B /* GameVC.swift in Sources */,
 				68973901229E4BA700B39854 /* CouponsViewModel.swift in Sources */,
 				683DE13322A0C07900E46616 /* GameMapModel.swift in Sources */,
+				6845A10622A3EB0D0065171C /* ProblemModel.swift in Sources */,
 				6839292022968E410098E185 /* AppDelegate.swift in Sources */,
 				684CDBB1229E109C00EA1229 /* CouponPath.swift in Sources */,
 				684CDBAD229E0F2D00EA1229 /* TeamPath.swift in Sources */,

@@ -14,9 +14,13 @@ import RxDataSources
 
 class GameVC: UIViewController {
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var captureBtn: UIButton!
+    @IBOutlet weak var gameTutorialsBtn: tutorialsButtonShape!
     
     var viewModel: GameViewModel!
     let disposeBag = DisposeBag()
+    let captureStatus = PublishRelay<Int>()
+    let dealyTime = PublishRelay<String>()
     
     let joinTeamVC = UIStoryboard(name: "Game", bundle: nil).instantiateViewController(withIdentifier: "joinTeam") as! JoinTeamVC
     let boothListVC = UIStoryboard(name: "Game", bundle: nil).instantiateViewController(withIdentifier: "boothList") as! BoothListVC
@@ -25,6 +29,8 @@ class GameVC: UIViewController {
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = true
         viewModel = GameViewModel()
+        self.joinTeamVC.viewModel = viewModel
+        self.boothListVC.viewModel = viewModel
         bindViewModel()
     }
 }
@@ -35,89 +41,88 @@ extension GameVC {
             .bind(to: viewModel.ready)
             .disposed(by: disposeBag)
         
-        viewModel.teamStatus
-            .drive(onNext: { [weak self] isTeamHave in
-                print(isTeamHave)
-                guard let `self` = self else { return }
-                if isTeamHave {
-                    self.boothListBind()
-                } else {
-                    self.containerView.addSubview(self.joinTeamVC.view)
-                    
-                    self.joinTeamVC.joinTeamCodeInput.rx.text
-                        .orEmpty
-                        .bind(to: self.viewModel.teamCode)
-                        .disposed(by: self.disposeBag)
-                    
-                    self.joinTeamVC.joinTeamBtn.rx.tap
-                        .bind(to: self.viewModel.joinTeamDidClicked)
-                        .disposed(by: self.disposeBag)
+        gameTutorialsBtn.rx.tap
+            .bind(to: viewModel.tutorialsDidClicked)
+            .disposed(by: disposeBag)
+        
+        viewModel.tutorialsClickedDone
+            .drive(onNext: { isClick in
+                if isClick{
+                    let alert = UIAlertController(title: "땅따먹기", message:
+                        """
+                        여기있는 카메라 버튼을 클릭하여
+                        각 부스마다 있는 QR코드를 촬영 후
+                        문제를 풀어 맞추면 해당 부스를
+                        획득하는 방식의 땅따먹기 게임
+                        """, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
             })
             .disposed(by: disposeBag)
         
+        viewModel.teamStatus
+            .drive(onNext: { [weak self] isTeamHave in
+                guard let `self` = self else { return }
+                if !isTeamHave {
+                    self.containerView.addSubview(self.joinTeamVC.view)
+                }
+            })
+            .disposed(by: disposeBag)
         
         viewModel.joinTeamIsSuccessed
             .drive(onNext: { [weak self] isJoinSuccess in
                 guard let `self` = self else { return }
                 if isJoinSuccess{
-                    self.showToast(msg: "팀 가입 완료")
-                    self.boothListBind()
+                    self.containerView.addSubview(self.boothListVC.view)
+                    self.boothListVC.showToast(msg: "팀 가입 완료")
+                } else {
+                    self.showToast(msg: "다시 시도해주세요.")
                 }
             })
             .disposed(by: disposeBag)
         
-    }
-    
-    func boothListBind(){
-        viewModel.gameMapReady.accept(())
+        captureBtn.rx.tap
+            .bind(to: viewModel.qrDidClicked)
+            .disposed(by: disposeBag)
+        
+        viewModel.captureClickedDone
+            .drive(onNext: { isSuccess in
+                if isSuccess{
+                    let main = UIStoryboard(name: "Main", bundle: nil)
+                    let QrCodeReader = main.instantiateViewController(withIdentifier: "QRCodeReader") as! QRCodeReaderVC
+                    QrCodeReader.flag.accept("game")
+                    self.navigationController?.pushViewController(QrCodeReader, animated: true)
+                }
+            })
+            .disposed(by: disposeBag)
         
         viewModel.gameIsProceeding
-            .drive(onNext: { [weak self] isGaming in
+            .drive(onNext: { [weak self] statusCode in
                 guard let `self` = self else { return }
-                print(isGaming)
-                if isGaming {
-                    self.containerView.addSubview(self.boothListVC.view)
-                    
-                    let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String,GameMapModel>>(configureCell:
-                    { dataSource, tableView, indexPath, data in
-                        let cell = tableView.dequeueReusableCell(withIdentifier: "BoothCell", for: indexPath) as! BoothCell
-                        cell.boothName.text = data.boothName
-                        cell.boothLocation.text = data.location
-                        switch data.ownTeam {
-                        case "밍크고래팀":
-                            cell.layer.borderColor = Color.MINKWHALE.getColor().cgColor
-                        case "혹등고래팀":
-                            cell.layer.borderColor = Color.HUMPBACKWHALE.getColor().cgColor
-                        case "대왕고래팀":
-                            cell.layer.borderColor = Color.GREATWHALE.getColor().cgColor
-                        default:
-                            cell.layer.borderColor = UIColor.gray.cgColor
-                        }
-                        return cell
-                    })
-                    
-                    self.boothListVC.rx.viewWillAppear
-                        .bind(to: self.viewModel.gameMapReady)
-                        .disposed(by: self.disposeBag)
-                    
-                    self.viewModel.boothList
-                        .drive(self.boothListVC.boothList.rx.items(dataSource: dataSource))
-                        .disposed(by: self.disposeBag)
-                    
-                    self.viewModel.endTime
-                        .drive(self.boothListVC.leftTimeLabel.rx.text)
-                        .disposed(by: self.disposeBag)
-                    
-                    self.viewModel.teamName
-                        .drive(self.boothListVC.myTeamLabel.rx.text)
-                        .disposed(by: self.disposeBag)
-                    
-                } else {
+                switch statusCode{
+                case 200: self.containerView.addSubview(self.boothListVC.view)
+                case 408:
+                    let alert = UIAlertController(title: "게임 종료", message:
+                        "땅따먹기 게임 시간이 만료되었습니다.\n메인 부스로 오셔서 결과를 확인해주세요!"
+                        , preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                     self.containerView.addSubview(self.notGameStartedVC.view)
+                default: self.containerView.addSubview(self.notGameStartedVC.view)
                 }
             })
             .disposed(by: self.disposeBag)
         
+        dealyTime.asObservable()
+            .subscribe(onNext: { status in
+                if status != "이미 우리팀이 점령중입니다." {
+                    self.showToast(msg: "남은 시간 : \(status)")
+                } else {
+                    self.showToast(msg: "\(status)")
+                }
+            })
+        .disposed(by: disposeBag)
     }
 }
+

@@ -11,6 +11,7 @@ import UIKit
 
 class NavigationShape: UINavigationController {
     override func viewDidLoad() {
+        self.navigationBar.isHidden = true
         self.navigationBar.isTranslucent = false
         self.navigationBar.backgroundColor = .white
         self.navigationBar.tintColor = Color.MAINBLUE.getColor()
@@ -24,5 +25,30 @@ class TabShape: UITabBarController {
         self.tabBar.barTintColor = Color.MAINBLUE.getColor()
         self.tabBar.unselectedItemTintColor = .gray
         self.tabBar.tintColor = .white
+    }
+}
+
+class tutorialsButtonShape: UIButton {
+    override func awakeFromNib() {
+        setShape()
+    }
+    
+    func setShape(){
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.black.cgColor
+        layer.cornerRadius = 10
+    }
+}
+
+
+class toMainButtonShape: UIButton {
+    override func awakeFromNib() {
+        setShape()
+    }
+    
+    func setShape(){
+        layer.borderWidth = 1
+        layer.borderColor = Color.MAINBLUE.getColor().cgColor
+        layer.cornerRadius = 10
     }
 }

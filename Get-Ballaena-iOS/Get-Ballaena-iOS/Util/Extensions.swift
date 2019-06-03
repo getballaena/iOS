@@ -29,7 +29,7 @@ extension UIViewController {
     }
     
     func showToast(msg: String, fun: (() -> Void)? = nil){
-        let toast = UILabel(frame: CGRect(x: 32, y: 550, width: view.frame.size.width - 64, height: 42))
+        let toast = UILabel(frame: CGRect(x: 32, y: 450, width: view.frame.size.width - 64, height: 42))
         toast.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         toast.textColor = UIColor.white
         toast.text = msg

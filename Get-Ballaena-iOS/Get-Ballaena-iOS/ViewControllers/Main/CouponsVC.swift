@@ -20,6 +20,7 @@ class CouponsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         bindViewModel()
         couponList.separatorStyle = .none
     }
@@ -37,6 +38,7 @@ extension CouponsVC {
         let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, CouponModel>>(configureCell:
         { dataSource, tableview, index, data in
             let cell = tableview.dequeueReusableCell(withIdentifier: "CouponCell", for: index) as! CouponCell
+            cell.selectionStyle = .none
             cell.couponName.text = data.couponName
             cell.layer.borderColor = UIColor.black.cgColor
             return cell
@@ -77,26 +79,22 @@ extension CouponsVC {
                     self.present(alert, animated: true, completion: nil)
                 }
             })
-        .disposed(by: disposeBag)
+            .disposed(by: disposeBag)
         
         viewModel.couponUsed
-            .drive(onNext: { [weak self] statusCode in
+            .drive(onNext: {[weak self] status in
                 guard let `self` = self else { return }
-                switch statusCode{
+                switch status{
                 case 200:
-//                    let indexPath = self.viewModel.cellSelected.value
-                    self.viewModel.couponList.drive(onNext: { datas in
-//                        datas[indexPath.section].model.remove(at: indexPath.section)
-//                        datas[indexPath.section].items.remove(at: indexPath.section)
-                    }).disposed(by: self.disposeBag)
+                    self.viewModel.ready.accept(())
                     
-//                    self.couponList?.deleteSections(IndexSet(arrayLiteral: indexPath.section), with: .automatic)
-                case 204: self.showToast(msg: "없는 쿠폰입니다.")
-                case 403: self.showToast(msg: "잘못된 스태프코드 입니다.")
-                case 400: self.showToast(msg: "잘못된 쿠폰 아이디")
-                default: self.showToast(msg: "error")
+                    self.showToast(msg: "성공적으로 삭제되었습니다.")
+                    
+                default: return
                 }
             }).disposed(by: disposeBag)
+        
+        
     }
 }
 
@@ -113,3 +111,5 @@ extension CouponsVC: UITableViewDelegate {
 class CouponCell: UITableViewCell{
     @IBOutlet weak var couponName: UILabel!
 }
+
+

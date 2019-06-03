@@ -103,9 +103,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEa-5L-zDz" customClass="tutorialsButtonShape" customModule="Get_Ballaena_iOS" customModuleProvider="target">
+                                <rect key="frame" x="335" y="64" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="MFB-dM-srJ"/>
+                                    <constraint firstAttribute="width" constant="20" id="ode-Cr-Mue"/>
+                                </constraints>
+                                <state key="normal" title="?">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Diu-Vp-1ck" firstAttribute="trailing" secondItem="lEa-5L-zDz" secondAttribute="trailing" constant="20" id="4WR-3E-lpX"/>
                             <constraint firstAttribute="trailing" secondItem="9es-S0-0iH" secondAttribute="trailing" constant="20" id="CFq-Qp-9YA"/>
                             <constraint firstItem="Diu-Vp-1ck" firstAttribute="trailing" secondItem="XL4-f4-7iY" secondAttribute="trailing" constant="35" id="CGa-zv-lSK"/>
                             <constraint firstItem="ima-GP-tUQ" firstAttribute="leading" secondItem="YbI-Ms-O92" secondAttribute="trailing" constant="8" id="Ha6-cD-mg2"/>
@@ -120,13 +131,16 @@
                             <constraint firstItem="YbI-Ms-O92" firstAttribute="leading" secondItem="Diu-Vp-1ck" secondAttribute="leading" constant="20" id="mU2-cE-OwV"/>
                             <constraint firstItem="Die-HP-h9a" firstAttribute="leading" secondItem="YbI-Ms-O92" secondAttribute="trailing" constant="8" id="nkk-JS-bfe"/>
                             <constraint firstItem="YbI-Ms-O92" firstAttribute="top" secondItem="Diu-Vp-1ck" secondAttribute="top" constant="20" id="xth-cL-qcL"/>
+                            <constraint firstItem="lEa-5L-zDz" firstAttribute="top" secondItem="Diu-Vp-1ck" secondAttribute="top" constant="20" id="zBm-m4-8lr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Diu-Vp-1ck"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="스탬프" image="stamptour_icon.png" id="1yE-5Z-f3o"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="stampCaptureBtn" destination="XL4-f4-7iY" id="86x-sq-M5X"/>
                         <outlet property="stampList" destination="9es-S0-0iH" id="d66-WV-Du2"/>
+                        <outlet property="stampTutorialsBtn" destination="lEa-5L-zDz" id="1Pa-xK-siS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5OB-Gf-BeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -25,7 +25,7 @@ protocol Game {
     func joinTeam(teamCode: String) -> Observable<Int>
     func gameMap() -> Observable<(Int,Data)>
     func gameProblems(boothName: String) -> Observable<(Int,Data)>
-    func solveProblem(boothName: String, problemId: String, answer: String) -> Observable<Int>
+    func solveProblem(boothName: String, problemId: String, answer: String) -> Observable<(Int,Data)>
 }
 
 protocol Coupons {
@@ -61,14 +61,13 @@ class StampApi: Stamp {
                           params: nil,
                           header: Header.Authorization)
             .map { res, data -> (Int, Data) in
-                print(res.statusCode)
                 return (res.statusCode, data)
             }
     }
     
     func captureStamp(stampName: String) -> Observable<Int> {
         return client.post(path: StampPath.stamp.Path(),
-                           params: nil,
+                           params: ["stampName" : stampName],
                            header: Header.Authorization)
             .map { res, data -> Int in
                 return res.statusCode
@@ -113,12 +112,13 @@ class GameApi: Game {
         }
     }
     
-    func solveProblem(boothName: String, problemId: String, answer: String) -> Observable<Int> {
+    func solveProblem(boothName: String, problemId: String, answer: String) -> Observable<(Int,Data)> {
         return client.post(path: GamePath.solve(boothName: boothName).Path(),
                            params: ["problemId" : problemId,
-                                    "answer" : answer], header: Header.Authorization)
-            .map { res, data -> Int in
-                return res.statusCode
+                                    "answer" : answer],
+                           header: Header.Authorization)
+            .map { res, data -> (Int,Data) in
+                return (res.statusCode, data)
         }
     }
 }
@@ -133,7 +133,6 @@ class GameApi: Game {
                     switch res.statusCode {
                     case 200:
                         guard let response = try? JSONDecoder().decode([CouponModel].self, from: data) else {
-                            print("decode failure")
                             return []
                         }
                         return response

@@ -14,9 +14,15 @@ import RxDataSources
 class StampViewModel {
     //Input
     let ready = PublishRelay<Void>()
+    let captureDidClicked = PublishRelay<Void>()
+    let qrBoothName = BehaviorRelay<String>(value: "")
+    let tutorialsDidClicked = PublishRelay<Void>()
     
     //Output
     let items: Driver<[SectionModel<String,StampModel>]>
+    let captureClickDone: Driver<Bool>
+    let qrDidDone: Driver<Bool>
+    let tutorialsClickedDone: Driver<Bool>
     
     init() {
         let api = StampApi()
@@ -28,18 +34,36 @@ class StampViewModel {
                 case 200:
                     var items: [SectionModel<String,StampModel>] = []
                     guard let response = try? JSONDecoder().decode([StampModel].self, from: data) else {
-                        print("decode fail")
                         return []
                     }
                     for i in response.indices {
                         items.append(SectionModel<String,StampModel>(model: "", items: [response[i]]))
                     }
-                    print(response)
                     return items
                 default:
                     return []
                 }
-        }
-        .asDriver(onErrorJustReturn: [])
+            }
+            .asDriver(onErrorJustReturn: [])
+        
+        self.captureClickDone = captureDidClicked.asObservable()
+            .map { return true }
+            .asDriver(onErrorJustReturn: false)
+        
+        self.qrDidDone = qrBoothName.asObservable()
+            .flatMapLatest { api.captureStamp(stampName: $0) }
+            .map { status -> Bool in
+                switch status{
+                case 200: return true
+                default:
+                    return false
+                }
+            }
+            .asDriver(onErrorJustReturn: false)
+        
+        self.tutorialsClickedDone = tutorialsDidClicked.asObservable()
+            .map { return true }
+            .asDriver(onErrorJustReturn: false)
+        
     }
 }

@@ -23,8 +23,10 @@ class CouponsViewModel {
     let couponList: Driver<[SectionModel<String,CouponModel>]>
     let selectedDone: Driver<Bool>
     let couponUsed: Driver<Int>
+    let selectedIndex = BehaviorRelay<IndexPath>(value: IndexPath(row: 0, section: 0))
     
     init() {
+        let disposeBag = DisposeBag()
         let api = CouponsApi()
         
         self.couponList = ready.asObservable()
@@ -56,5 +58,10 @@ class CouponsViewModel {
             .flatMapLatest { api.couponUse(couponId: $0, staffCode: $1) }
             .map { return $0 }
             .asDriver(onErrorJustReturn: 0)
+        
+        cellSelected.asObservable()
+            .map { return $0 }
+            .bind(to: self.selectedIndex)
+            .disposed(by: disposeBag)
     }
 }

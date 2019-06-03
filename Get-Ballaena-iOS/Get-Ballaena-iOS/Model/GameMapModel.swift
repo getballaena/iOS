@@ -12,6 +12,7 @@ struct GameMapModel: Codable {
     let boothName: String
     let location: String
     let ownTeam: String
+  
     
     enum CodingKeys: String, CodingKey {
         case boothName = "booth_name"

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F16-vQ-kwb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F16-vQ-kwb">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -134,6 +134,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExX-1P-XME" customClass="tutorialsButtonShape" customModule="Get_Ballaena_iOS" customModuleProvider="target">
+                                <rect key="frame" x="335" y="64" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="S3E-3y-b2m"/>
+                                    <constraint firstAttribute="width" constant="20" id="orh-tI-vS8"/>
+                                </constraints>
+                                <state key="normal" title="?">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -146,7 +156,9 @@
                             <constraint firstItem="pyl-6H-hcC" firstAttribute="bottom" secondItem="4il-Kt-uGI" secondAttribute="bottom" id="Sg1-3B-vEK"/>
                             <constraint firstItem="pyl-6H-hcC" firstAttribute="leading" secondItem="4il-Kt-uGI" secondAttribute="leading" id="T6J-zO-epI"/>
                             <constraint firstItem="pyl-6H-hcC" firstAttribute="top" secondItem="DNs-ns-MZs" secondAttribute="bottom" constant="20" id="Tp0-lI-Ehi"/>
+                            <constraint firstItem="4il-Kt-uGI" firstAttribute="trailing" secondItem="ExX-1P-XME" secondAttribute="trailing" constant="20" id="Up4-e1-lTz"/>
                             <constraint firstItem="61f-5T-INg" firstAttribute="top" secondItem="4il-Kt-uGI" secondAttribute="top" constant="24" id="b0Z-Sf-ben"/>
+                            <constraint firstItem="ExX-1P-XME" firstAttribute="top" secondItem="4il-Kt-uGI" secondAttribute="top" constant="20" id="c9Q-9V-MMc"/>
                             <constraint firstItem="4il-Kt-uGI" firstAttribute="bottom" secondItem="gob-bw-uKq" secondAttribute="bottom" constant="35" id="d5Y-eT-oDd"/>
                             <constraint firstItem="DNs-ns-MZs" firstAttribute="centerX" secondItem="A0f-w1-OxD" secondAttribute="centerX" id="e5h-1g-IQN"/>
                             <constraint firstItem="niY-Ps-5Te" firstAttribute="leading" secondItem="4il-Kt-uGI" secondAttribute="leading" constant="20" id="g3q-kN-Tes"/>
@@ -157,59 +169,61 @@
                     <tabBarItem key="tabBarItem" title="땅따먹기" image="game_icon.png" id="xqh-hN-Sme"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="captureBtn" destination="gob-bw-uKq" id="1cs-LN-Vfb"/>
                         <outlet property="containerView" destination="pyl-6H-hcC" id="VsW-ju-S3h"/>
+                        <outlet property="gameTutorialsBtn" destination="ExX-1P-XME" id="sF5-hn-Gt1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWc-gO-0se" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="360.80000000000001" y="-112.3152709359606"/>
         </scene>
-        <!--View Controller-->
+        <!--Solve ProblemVC-->
         <scene sceneID="xbH-h5-V2J">
             <objects>
-                <viewController id="kbm-In-FPu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SolveProblem" id="kbm-In-FPu" customClass="SolveProblemVC" customModule="Get_Ballaena_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cPM-aL-ScB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whale_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="T8P-A8-7tW">
-                                <rect key="frame" x="62.666666666666657" y="114" width="249.99999999999997" height="200"/>
+                                <rect key="frame" x="87.666666666666686" y="94" width="200" height="180"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="5Fy-Ve-waW"/>
-                                    <constraint firstAttribute="width" constant="250" id="6rE-aQ-cuW"/>
+                                    <constraint firstAttribute="width" constant="200" id="Oh7-vv-CPy"/>
+                                    <constraint firstAttribute="height" constant="180" id="X9x-cc-0h6"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="땅따먹기 게임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCE-eP-7kG">
-                                <rect key="frame" x="130.66666666666666" y="322" width="114" height="26"/>
+                                <rect key="frame" x="130.66666666666666" y="282" width="114" height="26"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고래잡이부스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNX-Vm-JU4">
-                                <rect key="frame" x="143" y="356" width="89" height="21"/>
+                                <rect key="frame" x="143" y="316" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다음 중 사실이 아닌것은?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsq-42-vbA">
-                                <rect key="frame" x="93.333333333333329" y="427" width="188.33333333333337" height="23"/>
+                                <rect key="frame" x="93.666666666666686" y="387" width="188" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w8W-Yw-lAM">
-                                <rect key="frame" x="62.666666666666657" y="472" width="249.99999999999997" height="230"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w8W-Yw-lAM">
+                                <rect key="frame" x="37.666666666666657" y="432" width="300" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="C99-5O-kzA"/>
-                                    <constraint firstAttribute="height" constant="230" id="uxK-0S-fVo"/>
+                                    <constraint firstAttribute="height" constant="300" id="oqW-0S-yiu"/>
+                                    <constraint firstAttribute="width" constant="300" id="zqo-PE-44r"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="7WD-Nb-r5u">
-                                        <rect key="frame" x="0.0" y="28" width="249.99999999999997" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="answerCell" rowHeight="50" id="7WD-Nb-r5u" customClass="AnswerCell" customModule="Get_Ballaena_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="300" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7WD-Nb-r5u" id="VPG-Qz-IaC">
-                                            <rect key="frame" x="0.0" y="0.0" width="249.99999999999997" height="49.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고래는 멸종 위기종이야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vb-vR-4je">
@@ -235,6 +249,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="answer" destination="6Vb-vR-4je" id="KJD-yR-cbO"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <userDefinedRuntimeAttributes>
@@ -253,17 +270,20 @@
                             <constraint firstItem="w8W-Yw-lAM" firstAttribute="centerX" secondItem="cPM-aL-ScB" secondAttribute="centerX" id="0KY-q5-RUt"/>
                             <constraint firstItem="JNX-Vm-JU4" firstAttribute="top" secondItem="pCE-eP-7kG" secondAttribute="bottom" constant="8" id="CWg-bA-0ti"/>
                             <constraint firstItem="JNX-Vm-JU4" firstAttribute="centerX" secondItem="cPM-aL-ScB" secondAttribute="centerX" id="DZd-dY-HLc"/>
+                            <constraint firstItem="T8P-A8-7tW" firstAttribute="top" secondItem="Vq4-Ki-TMb" secondAttribute="top" constant="50" id="R3T-ee-oKY"/>
                             <constraint firstItem="Lsq-42-vbA" firstAttribute="centerX" secondItem="cPM-aL-ScB" secondAttribute="centerX" id="aVU-36-33v"/>
                             <constraint firstItem="T8P-A8-7tW" firstAttribute="centerX" secondItem="cPM-aL-ScB" secondAttribute="centerX" id="hlB-xp-All"/>
                             <constraint firstItem="pCE-eP-7kG" firstAttribute="centerX" secondItem="cPM-aL-ScB" secondAttribute="centerX" id="pOl-Zn-7uN"/>
                             <constraint firstItem="pCE-eP-7kG" firstAttribute="top" secondItem="T8P-A8-7tW" secondAttribute="bottom" constant="8" id="pyb-Bf-b1J"/>
                             <constraint firstItem="w8W-Yw-lAM" firstAttribute="top" secondItem="Lsq-42-vbA" secondAttribute="bottom" constant="22" id="sBQ-hr-KHq"/>
                             <constraint firstItem="Lsq-42-vbA" firstAttribute="top" secondItem="JNX-Vm-JU4" secondAttribute="bottom" constant="50" id="t4l-Tc-v0I"/>
-                            <constraint firstItem="T8P-A8-7tW" firstAttribute="top" secondItem="Vq4-Ki-TMb" secondAttribute="top" constant="70" id="x9f-0z-xj5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vq4-Ki-TMb"/>
                     </view>
                     <connections>
+                        <outlet property="answerList" destination="w8W-Yw-lAM" id="kXs-tO-nwB"/>
+                        <outlet property="boothName" destination="JNX-Vm-JU4" id="EY3-5f-b19"/>
+                        <outlet property="problemContent" destination="Lsq-42-vbA" id="gaV-zP-hh5"/>
                         <segue destination="jFG-Tc-AeZ" kind="show" identifier="toCorrect" id="fAm-0N-Yf9"/>
                         <segue destination="WoF-5n-Qln" kind="show" identifier="toWrong" id="QVr-ge-6Sc"/>
                     </connections>
@@ -272,10 +292,10 @@
             </objects>
             <point key="canvasLocation" x="361" y="948"/>
         </scene>
-        <!--View Controller-->
+        <!--Correct AnswerVC-->
         <scene sceneID="ruD-lH-hi8">
             <objects>
-                <viewController id="jFG-Tc-AeZ" sceneMemberID="viewController">
+                <viewController id="jFG-Tc-AeZ" customClass="CorrectAnswerVC" customModule="Get_Ballaena_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5xk-dI-xaf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -299,32 +319,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qT-gQ-Yr8">
-                                <rect key="frame" x="122.66666666666669" y="427" width="130" height="130"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="JMn-pR-7uo"/>
-                                    <constraint firstAttribute="width" constant="130" id="luI-4y-PfQ"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.3856886625" green="0.72744768859999998" blue="0.82746797800000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="65"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정답입니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skM-Nq-o24">
                                 <rect key="frame" x="134.66666666666666" y="587" width="106" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGU-pF-ZxC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGU-pF-ZxC" customClass="toMainButtonShape" customModule="Get_Ballaena_iOS" customModuleProvider="target">
                                 <rect key="frame" x="47.666666666666657" y="665" width="280" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="HCR-dh-kSS"/>
@@ -345,24 +346,34 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct_answer.png" translatesAutoresizingMaskIntoConstraints="NO" id="sWA-I1-vFl">
+                                <rect key="frame" x="122.66666666666669" y="427" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Lv2-ei-a92"/>
+                                    <constraint firstAttribute="height" constant="130" id="hgX-bg-kez"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xA1-vJ-X4r" firstAttribute="top" secondItem="J5p-Jl-078" secondAttribute="top" constant="70" id="0pe-9o-Ldj"/>
                             <constraint firstItem="Ik6-vh-jXQ" firstAttribute="centerX" secondItem="5xk-dI-xaf" secondAttribute="centerX" id="7gx-y9-vjJ"/>
-                            <constraint firstItem="4qT-gQ-Yr8" firstAttribute="centerX" secondItem="5xk-dI-xaf" secondAttribute="centerX" id="8Kl-ed-3xm"/>
                             <constraint firstItem="xA1-vJ-X4r" firstAttribute="centerX" secondItem="5xk-dI-xaf" secondAttribute="centerX" id="Hlx-ek-c0t"/>
                             <constraint firstItem="TGU-pF-ZxC" firstAttribute="centerX" secondItem="5xk-dI-xaf" secondAttribute="centerX" id="Hq3-Ac-j01"/>
+                            <constraint firstItem="sWA-I1-vFl" firstAttribute="top" secondItem="wYI-xu-fUg" secondAttribute="bottom" constant="50" id="IRI-RR-Llu"/>
+                            <constraint firstItem="skM-Nq-o24" firstAttribute="top" secondItem="sWA-I1-vFl" secondAttribute="bottom" constant="30" id="Zav-SV-BDo"/>
+                            <constraint firstItem="sWA-I1-vFl" firstAttribute="centerX" secondItem="5xk-dI-xaf" secondAttribute="centerX" id="aFG-E5-xMm"/>
                             <constraint firstItem="wYI-xu-fUg" firstAttribute="centerX" secondItem="5xk-dI-xaf" secondAttribute="centerX" id="bHx-s5-u7o"/>
                             <constraint firstItem="TGU-pF-ZxC" firstAttribute="top" secondItem="skM-Nq-o24" secondAttribute="bottom" constant="50" id="dIN-Yl-d9G"/>
-                            <constraint firstItem="skM-Nq-o24" firstAttribute="top" secondItem="4qT-gQ-Yr8" secondAttribute="bottom" constant="30" id="l7a-qx-1HY"/>
                             <constraint firstItem="wYI-xu-fUg" firstAttribute="top" secondItem="Ik6-vh-jXQ" secondAttribute="bottom" constant="8" id="pst-9A-445"/>
                             <constraint firstItem="Ik6-vh-jXQ" firstAttribute="top" secondItem="xA1-vJ-X4r" secondAttribute="bottom" constant="8" id="teK-hZ-ckz"/>
-                            <constraint firstItem="4qT-gQ-Yr8" firstAttribute="top" secondItem="wYI-xu-fUg" secondAttribute="bottom" constant="50" id="v1j-vQ-gfv"/>
                             <constraint firstItem="skM-Nq-o24" firstAttribute="centerX" secondItem="5xk-dI-xaf" secondAttribute="centerX" id="vSB-6N-h1c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J5p-Jl-078"/>
                     </view>
+                    <connections>
+                        <outlet property="toMainBtn" destination="TGU-pF-ZxC" id="yWL-rB-ugm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GbQ-2L-4DL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -448,15 +459,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="536.66700000000003"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oua-tF-sZ4">
-                                <rect key="frame" x="0.0" y="87.333333333333343" width="375" height="415.33333333333326"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oua-tF-sZ4">
+                                <rect key="frame" x="20" y="87.333333333333343" width="335" height="415.33333333333326"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BoothCell" rowHeight="80" id="9ct-3Z-5Lq" customClass="BoothCell" customModule="Get_Ballaena_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="28" width="335" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9ct-3Z-5Lq" id="FOE-Ag-X14">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일각 고래 체험기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYQ-Jf-fgm">
@@ -484,6 +495,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="boothLocation" destination="3Du-71-drf" id="1hy-Ja-Hb3"/>
@@ -529,14 +543,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="oua-tF-sZ4" firstAttribute="leading" secondItem="h33-PQ-vlt" secondAttribute="leading" id="8OZ-Cx-Jhs"/>
                             <constraint firstItem="Wuh-Km-312" firstAttribute="leading" secondItem="h33-PQ-vlt" secondAttribute="leading" constant="30" id="9yO-DL-w6v"/>
-                            <constraint firstItem="h33-PQ-vlt" firstAttribute="bottom" secondItem="oua-tF-sZ4" secondAttribute="bottom" id="HMj-pV-NfN"/>
-                            <constraint firstItem="h33-PQ-vlt" firstAttribute="trailing" secondItem="oua-tF-sZ4" secondAttribute="trailing" id="Pff-Xb-Bld"/>
-                            <constraint firstItem="oua-tF-sZ4" firstAttribute="top" secondItem="Wuh-Km-312" secondAttribute="bottom" constant="23" id="Qzz-yJ-md2"/>
+                            <constraint firstItem="oua-tF-sZ4" firstAttribute="leading" secondItem="h33-PQ-vlt" secondAttribute="leading" constant="20" id="Bcz-zZ-otV"/>
+                            <constraint firstItem="oua-tF-sZ4" firstAttribute="top" secondItem="HkK-Ol-eLx" secondAttribute="bottom" constant="23" id="aNz-Nf-1gx"/>
                             <constraint firstItem="Wuh-Km-312" firstAttribute="top" secondItem="pgR-zb-Rq6" secondAttribute="topMargin" id="aUq-7L-D1s"/>
-                            <constraint firstItem="oua-tF-sZ4" firstAttribute="centerX" secondItem="pgR-zb-Rq6" secondAttribute="centerX" id="f1B-dG-R21"/>
+                            <constraint firstItem="h33-PQ-vlt" firstAttribute="trailing" secondItem="oua-tF-sZ4" secondAttribute="trailing" constant="20" id="dpn-HT-pEV"/>
                             <constraint firstItem="h33-PQ-vlt" firstAttribute="trailing" secondItem="HkK-Ol-eLx" secondAttribute="trailing" constant="30" id="gJ1-vB-Mue"/>
+                            <constraint firstItem="h33-PQ-vlt" firstAttribute="bottom" secondItem="oua-tF-sZ4" secondAttribute="bottom" id="w8U-hz-rem"/>
                             <constraint firstItem="HkK-Ol-eLx" firstAttribute="top" secondItem="pgR-zb-Rq6" secondAttribute="topMargin" id="x1A-RA-gLn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h33-PQ-vlt"/>
@@ -562,16 +575,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 게임이 시작되지 않았습니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqA-S6-8kh">
-                                <rect key="frame" x="75.666666666666686" y="258" width="224" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="44" y="264" width="287" height="26.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gqA-S6-8kh" firstAttribute="centerY" secondItem="ott-jo-IAt" secondAttribute="centerY" id="3Vk-Oh-iCX"/>
                             <constraint firstItem="gqA-S6-8kh" firstAttribute="centerX" secondItem="ott-jo-IAt" secondAttribute="centerX" id="JvS-2M-fqv"/>
+                            <constraint firstItem="gqA-S6-8kh" firstAttribute="top" secondItem="yp7-R1-Nk1" secondAttribute="top" constant="220" id="cYj-mA-sgD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yp7-R1-Nk1"/>
                     </view>
@@ -582,10 +595,10 @@
             </objects>
             <point key="canvasLocation" x="2583" y="-113"/>
         </scene>
-        <!--View Controller-->
+        <!--Wrong AnswerVC-->
         <scene sceneID="8Us-ZK-M0v">
             <objects>
-                <viewController id="WoF-5n-Qln" sceneMemberID="viewController">
+                <viewController id="WoF-5n-Qln" customClass="WrongAnswerVC" customModule="Get_Ballaena_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eJ4-5U-Nfm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -615,7 +628,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS0-49-UaM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS0-49-UaM" customClass="toMainButtonShape" customModule="Get_Ballaena_iOS" customModuleProvider="target">
                                 <rect key="frame" x="47.666666666666657" y="665" width="280" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="LcR-TL-fK8"/>
@@ -661,6 +674,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P8o-cG-VMy"/>
                     </view>
+                    <connections>
+                        <outlet property="toMainBtn" destination="IS0-49-UaM" id="Ysx-11-IXN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yvJ-sy-ASA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -669,8 +685,9 @@
     </scenes>
     <resources>
         <image name="camera.png" width="24" height="24"/>
+        <image name="correct_answer.png" width="108" height="112"/>
         <image name="game_icon.png" width="27" height="27"/>
         <image name="whale_icon.png" width="352" height="282"/>
-        <image name="wrong_answer.png" width="180" height="188"/>
+        <image name="wrong_answer.png" width="90" height="94"/>
     </resources>
 </document>
