@@ -25,11 +25,12 @@ class BoothListVC: UIViewController {
         self.boothList.delegate = nil
         bindViewModel()
     }
+    
 }
 
 extension BoothListVC{
     func bindViewModel(){
-        
+   
         rx.viewWillAppear
             .bind(to: self.viewModel.gameMapReady)
             .disposed(by: self.disposeBag)
@@ -63,7 +64,7 @@ extension BoothListVC{
         
         viewModel.endTime
             .drive(onNext: { endTime in
-                let date = Date(timeIntervalSince1970: Double(endTime) )
+                let date = Date(timeIntervalSince1970: Double(endTime + 32400) )
                 let format = DateFormatter()
                 format.timeZone = TimeZone(abbreviation: "GMT")
                 format.locale = NSLocale.current

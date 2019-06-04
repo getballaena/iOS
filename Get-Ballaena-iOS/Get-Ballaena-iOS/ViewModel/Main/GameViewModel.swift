@@ -17,12 +17,14 @@ class GameViewModel  {
     let teamCode = BehaviorRelay<String>(value: "")
     let joinTeamDidClicked = PublishRelay<Void>()
     let gameMapReady = PublishRelay<Void>()
+    let checkTeamReady = PublishRelay<Void>()
     let qrDidClicked = PublishRelay<Void>()
     let qrBoothName = BehaviorRelay<String>(value: "")
     let answer = PublishRelay<String>()
     let problemID = BehaviorRelay<String>(value: "")
     let toMainDidClicked = PublishRelay<Void>()
     let tutorialsDidClicked = PublishRelay<Void>()
+    let qrdelayTime = PublishRelay<String>()
     
     //Output
     let teamStatus: Driver<Bool>
@@ -36,6 +38,7 @@ class GameViewModel  {
     let isCorrect: Driver<String>
     let toMainDone: Driver<Bool>
     let tutorialsClickedDone: Driver<Bool>
+    let delayTime: Driver<String>
     
     init() {
         let api = GameApi()
@@ -65,7 +68,7 @@ class GameViewModel  {
             }
             .asDriver(onErrorJustReturn: false)
         
-        self.gameIsProceeding = ready.asObservable()
+        self.gameIsProceeding = checkTeamReady.asObservable()
             .flatMapLatest { api.gameMap() }
             .map { status, _  -> Int in
                 return status
@@ -131,6 +134,10 @@ class GameViewModel  {
         self.tutorialsClickedDone = tutorialsDidClicked.asObservable()
             .map { return true }
             .asDriver(onErrorJustReturn: false)
+        
+        self.delayTime = qrdelayTime.asObservable()
+            .map { return $0 }
+            .asDriver(onErrorJustReturn: "")
     }
 }
 

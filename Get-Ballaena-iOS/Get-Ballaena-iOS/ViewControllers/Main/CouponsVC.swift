@@ -88,7 +88,7 @@ extension CouponsVC {
                 case 200:
                     self.viewModel.ready.accept(())
                     
-                    self.showToast(msg: "성공적으로 삭제되었습니다.")
+                    self.showToast(msg: "성공적으로 사용되었습니다.")
                     
                 default: return
                 }

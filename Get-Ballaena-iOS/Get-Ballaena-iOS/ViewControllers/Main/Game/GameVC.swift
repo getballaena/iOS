@@ -19,12 +19,11 @@ class GameVC: UIViewController {
     
     var viewModel: GameViewModel!
     let disposeBag = DisposeBag()
-    let captureStatus = PublishRelay<Int>()
-    let dealyTime = PublishRelay<String>()
-    
+
     let joinTeamVC = UIStoryboard(name: "Game", bundle: nil).instantiateViewController(withIdentifier: "joinTeam") as! JoinTeamVC
     let boothListVC = UIStoryboard(name: "Game", bundle: nil).instantiateViewController(withIdentifier: "boothList") as! BoothListVC
     let notGameStartedVC = UIStoryboard(name: "Game", bundle: nil).instantiateViewController(withIdentifier: "notGameStarted") as! NotStartedGameVC
+    
     
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = true
@@ -32,7 +31,9 @@ class GameVC: UIViewController {
         self.joinTeamVC.viewModel = viewModel
         self.boothListVC.viewModel = viewModel
         bindViewModel()
+        delayTimeBind()
     }
+    
 }
 
 extension GameVC {
@@ -66,6 +67,8 @@ extension GameVC {
                 guard let `self` = self else { return }
                 if !isTeamHave {
                     self.containerView.addSubview(self.joinTeamVC.view)
+                } else {
+                    self.checkGaming()
                 }
             })
             .disposed(by: disposeBag)
@@ -74,8 +77,9 @@ extension GameVC {
             .drive(onNext: { [weak self] isJoinSuccess in
                 guard let `self` = self else { return }
                 if isJoinSuccess{
-                    self.containerView.addSubview(self.boothListVC.view)
-                    self.boothListVC.showToast(msg: "팀 가입 완료")
+                    self.showToast(msg: "팀 가입 완료")
+                    self.checkGaming()
+                    self.viewModel.checkTeamReady.accept(())
                 } else {
                     self.showToast(msg: "다시 시도해주세요.")
                 }
@@ -87,21 +91,30 @@ extension GameVC {
             .disposed(by: disposeBag)
         
         viewModel.captureClickedDone
-            .drive(onNext: { isSuccess in
+            .drive(onNext: { [weak self] isSuccess in
+                guard let `self` = self else { return }
                 if isSuccess{
                     let main = UIStoryboard(name: "Main", bundle: nil)
                     let QrCodeReader = main.instantiateViewController(withIdentifier: "QRCodeReader") as! QRCodeReaderVC
                     QrCodeReader.flag.accept("game")
+                    QrCodeReader.gameViewModel = self.viewModel
                     self.navigationController?.pushViewController(QrCodeReader, animated: true)
                 }
             })
             .disposed(by: disposeBag)
         
+    }
+    
+    func checkGaming(){
+        viewModel.checkTeamReady.accept(())
+        
         viewModel.gameIsProceeding
             .drive(onNext: { [weak self] statusCode in
                 guard let `self` = self else { return }
                 switch statusCode{
-                case 200: self.containerView.addSubview(self.boothListVC.view)
+                case 200:
+                    print(statusCode)
+                    self.containerView.addSubview(self.boothListVC.view)
                 case 408:
                     let alert = UIAlertController(title: "게임 종료", message:
                         "땅따먹기 게임 시간이 만료되었습니다.\n메인 부스로 오셔서 결과를 확인해주세요!"
@@ -112,17 +125,21 @@ extension GameVC {
                 default: self.containerView.addSubview(self.notGameStartedVC.view)
                 }
             })
-            .disposed(by: self.disposeBag)
-        
-        dealyTime.asObservable()
-            .subscribe(onNext: { status in
-                if status != "이미 우리팀이 점령중입니다." {
-                    self.showToast(msg: "남은 시간 : \(status)")
-                } else {
-                    self.showToast(msg: "\(status)")
+            .disposed(by: disposeBag)
+    }
+    
+    func delayTimeBind(){
+        viewModel.delayTime
+            .drive(onNext: { [weak self] delay in
+                guard let `self` = self else { return }
+                switch delay {
+                case "": return
+                case "team": self.showToast(msg: "이미 우리팀이 점령중입니다.")
+                default: self.showToast(msg: "딜레이 : \(delay)")
                 }
             })
-        .disposed(by: disposeBag)
+            .disposed(by: disposeBag)
     }
+    
 }
 

@@ -32,9 +32,9 @@ extension JoinTeamVC{
             .disposed(by: disposeBag)
         
         joinTeamBtn.rx.tap
+            .debounce(0.3, scheduler: MainScheduler.instance)
             .bind(to: viewModel.joinTeamDidClicked)
             .disposed(by: disposeBag)
-        
         
     }
 }

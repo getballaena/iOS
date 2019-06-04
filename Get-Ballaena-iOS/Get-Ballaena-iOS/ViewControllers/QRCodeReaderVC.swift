@@ -15,7 +15,6 @@ class QRCodeReaderVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
-    let gameVC = GameVC()
     var flag = BehaviorRelay<String>(value: "")
     var stampViewModel: StampViewModel!
     var gameViewModel: GameViewModel!
@@ -23,8 +22,7 @@ class QRCodeReaderVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+   
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         
@@ -131,14 +129,11 @@ extension QRCodeReaderVC{
                 })
                 .disposed(by: disposeBag)
         case "game":
-            gameViewModel = GameViewModel()
-            
             gameViewModel.qrBoothName.accept(code.replacingOccurrences(of: " ", with: "%20", options: .literal, range: nil))
             
             gameViewModel.qrDidDone
                 .drive(onNext: { [weak self]  status, data in
                     guard let `self` = self else { return }
-                    self.gameVC.captureStatus.accept(status)
                     switch status {
                     case 200:
                         let game = UIStoryboard(name: "Game", bundle: nil)
@@ -148,9 +143,12 @@ extension QRCodeReaderVC{
                         self.navigationController?.pushViewController(solve, animated: true)
                     case 409:
                         guard let response = try? JSONDecoder().decode(DelayModel.self, from: data) else { return }
-                        self.gameVC.dealyTime.accept(response.delayTime)
+                        self.gameViewModel.qrdelayTime.accept(response.delayTime)
+                        self.navigationController?.popViewController(animated: true)
+                    case 205:
+                        self.gameViewModel.qrdelayTime.accept("team")
+                        self.navigationController?.popViewController(animated: true)
                     default:
-                        self.gameVC.dealyTime.accept("이미 우리팀이 점령중입니다.")
                         self.navigationController?.popViewController(animated: true)
                     }
                 })

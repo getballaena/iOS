@@ -44,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9es-S0-0iH">
-                                <rect key="frame" x="20" y="190" width="335" height="549"/>
+                                <rect key="frame" x="20" y="190" width="335" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StampCell" rowHeight="80" id="R6v-Cj-8Do" customClass="BoothCell" customModule="Get_Ballaena_iOS" customModuleProvider="target">
@@ -120,13 +120,13 @@
                             <constraint firstAttribute="trailing" secondItem="9es-S0-0iH" secondAttribute="trailing" constant="20" id="CFq-Qp-9YA"/>
                             <constraint firstItem="Diu-Vp-1ck" firstAttribute="trailing" secondItem="XL4-f4-7iY" secondAttribute="trailing" constant="35" id="CGa-zv-lSK"/>
                             <constraint firstItem="ima-GP-tUQ" firstAttribute="leading" secondItem="YbI-Ms-O92" secondAttribute="trailing" constant="8" id="Ha6-cD-mg2"/>
+                            <constraint firstItem="Diu-Vp-1ck" firstAttribute="bottom" secondItem="9es-S0-0iH" secondAttribute="bottom" constant="20" id="KfF-bS-oD8"/>
                             <constraint firstItem="ima-GP-tUQ" firstAttribute="top" secondItem="Die-HP-h9a" secondAttribute="bottom" constant="8" id="Mhv-ol-pFj"/>
                             <constraint firstItem="Beg-Bv-Fzg" firstAttribute="centerX" secondItem="g98-9c-aNE" secondAttribute="centerX" id="UHE-vH-EqU"/>
                             <constraint firstItem="Diu-Vp-1ck" firstAttribute="bottom" secondItem="XL4-f4-7iY" secondAttribute="bottom" constant="35" id="WUQ-hH-Vbu"/>
                             <constraint firstItem="Beg-Bv-Fzg" firstAttribute="top" secondItem="YbI-Ms-O92" secondAttribute="bottom" constant="8" id="Ydf-DF-smp"/>
                             <constraint firstItem="Die-HP-h9a" firstAttribute="top" secondItem="Diu-Vp-1ck" secondAttribute="top" constant="24" id="c2g-Gs-3ii"/>
                             <constraint firstItem="9es-S0-0iH" firstAttribute="leading" secondItem="Diu-Vp-1ck" secondAttribute="leading" constant="20" id="dxP-0K-s9K"/>
-                            <constraint firstItem="9es-S0-0iH" firstAttribute="bottom" secondItem="Diu-Vp-1ck" secondAttribute="bottom" constant="10" id="kK7-75-Ljg"/>
                             <constraint firstItem="9es-S0-0iH" firstAttribute="top" secondItem="Beg-Bv-Fzg" secondAttribute="bottom" constant="40" id="l1k-VJ-mh2"/>
                             <constraint firstItem="YbI-Ms-O92" firstAttribute="leading" secondItem="Diu-Vp-1ck" secondAttribute="leading" constant="20" id="mU2-cE-OwV"/>
                             <constraint firstItem="Die-HP-h9a" firstAttribute="leading" secondItem="YbI-Ms-O92" secondAttribute="trailing" constant="8" id="nkk-JS-bfe"/>
@@ -145,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5OB-Gf-BeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="-189"/>
+            <point key="canvasLocation" x="476" y="-189.16256157635468"/>
         </scene>
     </scenes>
     <resources>

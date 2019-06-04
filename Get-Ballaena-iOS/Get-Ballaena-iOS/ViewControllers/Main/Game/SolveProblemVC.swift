@@ -74,10 +74,16 @@ extension SolveProblemVC{
             .drive(onNext: { [weak self] res in
                 guard let `self` = self else { return }
                 switch res{
-                case "정답": self.performSegue(withIdentifier: "toCorrect", sender: nil)
-                case "오답": self.performSegue(withIdentifier: "toWrong", sender: nil)
+                case "정답":
+                    let correctVC = UIStoryboard(name: "Game", bundle: nil).instantiateViewController(withIdentifier: "CorrectVC") as! CorrectAnswerVC
+                    correctVC.viewModel = self.viewModel
+                    self.performSegue(withIdentifier: "toCorrect", sender: nil)
+                case "오답":
+                    let wrongVC = UIStoryboard(name: "Game", bundle: nil).instantiateViewController(withIdentifier: "WrongVC") as! WrongAnswerVC
+                    wrongVC.viewModel = self.viewModel
+                    self.performSegue(withIdentifier: "toWrong", sender: nil)
                 case "": return
-                default: self.showToast(msg: "남은시간 : \(res)")
+                default: self.showToast(msg: "딜레이 : \(res)")
                 }
             })
             .disposed(by: disposeBag)

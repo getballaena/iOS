@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4440614B8363C94429659499 /* Pods_Get_Ballaena_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB55E33AF056CCA6008B81 /* Pods_Get_Ballaena_iOSTests.framework */; };
-		4E4DE5723DDA2A9E58D975EA /* Pods_Get_Ballaena_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755CEE89A5A27526A2E6F913 /* Pods_Get_Ballaena_iOSUITests.framework */; };
 		68269AFB229FF09300869C90 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68269AFA229FF09300869C90 /* TeamModel.swift */; };
 		6839292022968E410098E185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839291F22968E410098E185 /* AppDelegate.swift */; };
 		6839292222968E410098E185 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839292122968E410098E185 /* LoginVC.swift */; };
 		6839292522968E410098E185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6839292322968E410098E185 /* Main.storyboard */; };
-		6839292822968E410098E185 /* Get_Ballaena_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6839292622968E410098E185 /* Get_Ballaena_iOS.xcdatamodeld */; };
 		6839292A22968E430098E185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6839292922968E430098E185 /* Assets.xcassets */; };
 		6839292D22968E430098E185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6839292B22968E430098E185 /* LaunchScreen.storyboard */; };
 		6839293822968E430098E185 /* Get_Ballaena_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839293722968E430098E185 /* Get_Ballaena_iOSTests.swift */; };
@@ -61,7 +58,9 @@
 		68E032472297DF8A003FDE8B /* AuthPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E032462297DF8A003FDE8B /* AuthPath.swift */; };
 		68E032492297E1F5003FDE8B /* StampPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E032482297E1F5003FDE8B /* StampPath.swift */; };
 		68E79B2C22A0127D006931A6 /* JoinTeamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E79B2B22A0127D006931A6 /* JoinTeamVC.swift */; };
-		88DB19A319852070F9E33497 /* Pods_Get_Ballaena_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6317CC926F169AE3835FF8AF /* Pods_Get_Ballaena_iOS.framework */; };
+		6BB496A7AAF541ECA8AC22DB /* Pods_Get_Ballaena_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2988B466F1635B31D614D21 /* Pods_Get_Ballaena_iOSTests.framework */; };
+		9F0A17441E54EA6585742A5B /* Pods_Get_Ballaena_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA672C4C24B91AD96B66FDC7 /* Pods_Get_Ballaena_iOS.framework */; };
+		E3CB3FF6BAC4CA62BF71B4F8 /* Pods_Get_Ballaena_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FCE964083F0AD283FA83CD /* Pods_Get_Ballaena_iOSUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,16 +81,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		183B7F2C0B5A0E74C301A768 /* Pods-Get-Ballaena-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOSUITests/Pods-Get-Ballaena-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		2071E59E5ED1E0BFA425BDDB /* Pods-Get-Ballaena-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOS/Pods-Get-Ballaena-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		23370C1A9EE52D4DBA7DCD27 /* Pods-Get-Ballaena-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOSTests/Pods-Get-Ballaena-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		6317CC926F169AE3835FF8AF /* Pods_Get_Ballaena_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_Ballaena_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01FCE964083F0AD283FA83CD /* Pods_Get_Ballaena_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_Ballaena_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43E457C96980CB631EC80AC7 /* Pods-Get-Ballaena-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOSUITests/Pods-Get-Ballaena-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4FDBBA7769E66C8F40F368CC /* Pods-Get-Ballaena-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOSTests/Pods-Get-Ballaena-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		68269AFA229FF09300869C90 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
 		6839291C22968E410098E185 /* Get-Ballaena-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Get-Ballaena-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6839291F22968E410098E185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6839292122968E410098E185 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		6839292422968E410098E185 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6839292722968E410098E185 /* Get_Ballaena_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Get_Ballaena_iOS.xcdatamodel; sourceTree = "<group>"; };
 		6839292922968E430098E185 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6839292C22968E430098E185 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6839292E22968E430098E185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -144,11 +141,12 @@
 		68E032462297DF8A003FDE8B /* AuthPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPath.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		68E032482297E1F5003FDE8B /* StampPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampPath.swift; sourceTree = "<group>"; };
 		68E79B2B22A0127D006931A6 /* JoinTeamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTeamVC.swift; sourceTree = "<group>"; };
-		755CEE89A5A27526A2E6F913 /* Pods_Get_Ballaena_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_Ballaena_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B016F5CF309273541660EE35 /* Pods-Get-Ballaena-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOSUITests/Pods-Get-Ballaena-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C9BB55E33AF056CCA6008B81 /* Pods_Get_Ballaena_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_Ballaena_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD3BD8BF3C2BB298F66B10D2 /* Pods-Get-Ballaena-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOS/Pods-Get-Ballaena-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		F15225CF150BD117AD3A7C7F /* Pods-Get-Ballaena-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOSTests/Pods-Get-Ballaena-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		74FA8392EC60C1C7ECE6DD73 /* Pods-Get-Ballaena-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOSTests/Pods-Get-Ballaena-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9DE8FF2A031445E37B92A0D5 /* Pods-Get-Ballaena-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOS/Pods-Get-Ballaena-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A2988B466F1635B31D614D21 /* Pods_Get_Ballaena_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_Ballaena_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA672C4C24B91AD96B66FDC7 /* Pods_Get_Ballaena_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_Ballaena_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAC1957D0EC62D78530C0E40 /* Pods-Get-Ballaena-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOS/Pods-Get-Ballaena-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		CFF70F8C9F78CF7F6BF1D50C /* Pods-Get-Ballaena-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-Ballaena-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Get-Ballaena-iOSUITests/Pods-Get-Ballaena-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88DB19A319852070F9E33497 /* Pods_Get_Ballaena_iOS.framework in Frameworks */,
+				9F0A17441E54EA6585742A5B /* Pods_Get_Ballaena_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4440614B8363C94429659499 /* Pods_Get_Ballaena_iOSTests.framework in Frameworks */,
+				6BB496A7AAF541ECA8AC22DB /* Pods_Get_Ballaena_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,13 +170,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E4DE5723DDA2A9E58D975EA /* Pods_Get_Ballaena_iOSUITests.framework in Frameworks */,
+				E3CB3FF6BAC4CA62BF71B4F8 /* Pods_Get_Ballaena_iOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25BADABCD75B39C275608B36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA672C4C24B91AD96B66FDC7 /* Pods_Get_Ballaena_iOS.framework */,
+				A2988B466F1635B31D614D21 /* Pods_Get_Ballaena_iOSTests.framework */,
+				01FCE964083F0AD283FA83CD /* Pods_Get_Ballaena_iOSUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F7EC2A9163E775E6ED8FEAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DE8FF2A031445E37B92A0D5 /* Pods-Get-Ballaena-iOS.debug.xcconfig */,
+				BAC1957D0EC62D78530C0E40 /* Pods-Get-Ballaena-iOS.release.xcconfig */,
+				74FA8392EC60C1C7ECE6DD73 /* Pods-Get-Ballaena-iOSTests.debug.xcconfig */,
+				4FDBBA7769E66C8F40F368CC /* Pods-Get-Ballaena-iOSTests.release.xcconfig */,
+				CFF70F8C9F78CF7F6BF1D50C /* Pods-Get-Ballaena-iOSUITests.debug.xcconfig */,
+				43E457C96980CB631EC80AC7 /* Pods-Get-Ballaena-iOSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6839291322968E410098E185 = {
 			isa = PBXGroup;
 			children = (
@@ -186,8 +207,8 @@
 				6839293622968E430098E185 /* Get-Ballaena-iOSTests */,
 				6839294122968E430098E185 /* Get-Ballaena-iOSUITests */,
 				6839291D22968E410098E185 /* Products */,
-				9467B6600150F324696DB8B6 /* Pods */,
-				D97EF807793568A133500AB7 /* Frameworks */,
+				4F7EC2A9163E775E6ED8FEAB /* Pods */,
+				25BADABCD75B39C275608B36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,7 +236,6 @@
 				6839292922968E430098E185 /* Assets.xcassets */,
 				6839292B22968E430098E185 /* LaunchScreen.storyboard */,
 				6839292E22968E430098E185 /* Info.plist */,
-				6839292622968E410098E185 /* Get_Ballaena_iOS.xcdatamodeld */,
 			);
 			path = "Get-Ballaena-iOS";
 			sourceTree = "<group>";
@@ -381,29 +401,6 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
-		9467B6600150F324696DB8B6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2071E59E5ED1E0BFA425BDDB /* Pods-Get-Ballaena-iOS.debug.xcconfig */,
-				CD3BD8BF3C2BB298F66B10D2 /* Pods-Get-Ballaena-iOS.release.xcconfig */,
-				F15225CF150BD117AD3A7C7F /* Pods-Get-Ballaena-iOSTests.debug.xcconfig */,
-				23370C1A9EE52D4DBA7DCD27 /* Pods-Get-Ballaena-iOSTests.release.xcconfig */,
-				183B7F2C0B5A0E74C301A768 /* Pods-Get-Ballaena-iOSUITests.debug.xcconfig */,
-				B016F5CF309273541660EE35 /* Pods-Get-Ballaena-iOSUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D97EF807793568A133500AB7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6317CC926F169AE3835FF8AF /* Pods_Get_Ballaena_iOS.framework */,
-				C9BB55E33AF056CCA6008B81 /* Pods_Get_Ballaena_iOSTests.framework */,
-				755CEE89A5A27526A2E6F913 /* Pods_Get_Ballaena_iOSUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,11 +408,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6839294722968E430098E185 /* Build configuration list for PBXNativeTarget "Get-Ballaena-iOS" */;
 			buildPhases = (
-				BC4A9DEAC99CB0788182A0B8 /* [CP] Check Pods Manifest.lock */,
+				5F2C2114743BA1D6CF06E1A1 /* [CP] Check Pods Manifest.lock */,
 				6839291822968E410098E185 /* Sources */,
 				6839291922968E410098E185 /* Frameworks */,
 				6839291A22968E410098E185 /* Resources */,
-				48CF2B64B9436808F8D1F2DA /* [CP] Embed Pods Frameworks */,
+				AF0328E5D46CE94C5D82FDD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -430,7 +427,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6839294A22968E430098E185 /* Build configuration list for PBXNativeTarget "Get-Ballaena-iOSTests" */;
 			buildPhases = (
-				2B6F4619894F9A8C5E344761 /* [CP] Check Pods Manifest.lock */,
+				546D36F7ED57F415733D283B /* [CP] Check Pods Manifest.lock */,
 				6839292F22968E430098E185 /* Sources */,
 				6839293022968E430098E185 /* Frameworks */,
 				6839293122968E430098E185 /* Resources */,
@@ -449,7 +446,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6839294D22968E430098E185 /* Build configuration list for PBXNativeTarget "Get-Ballaena-iOSUITests" */;
 			buildPhases = (
-				A2F3261B51AD6E5C098FAECE /* [CP] Check Pods Manifest.lock */,
+				25CCC24C29CD317671FB19EA /* [CP] Check Pods Manifest.lock */,
 				6839293A22968E430098E185 /* Sources */,
 				6839293B22968E430098E185 /* Frameworks */,
 				6839293C22968E430098E185 /* Resources */,
@@ -547,7 +544,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B6F4619894F9A8C5E344761 /* [CP] Check Pods Manifest.lock */ = {
+		25CCC24C29CD317671FB19EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Get-Ballaena-iOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		546D36F7ED57F415733D283B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -569,7 +588,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		48CF2B64B9436808F8D1F2DA /* [CP] Embed Pods Frameworks */ = {
+		5F2C2114743BA1D6CF06E1A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Get-Ballaena-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF0328E5D46CE94C5D82FDD5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -601,50 +642,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Get-Ballaena-iOS/Pods-Get-Ballaena-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A2F3261B51AD6E5C098FAECE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Get-Ballaena-iOSUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BC4A9DEAC99CB0788182A0B8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Get-Ballaena-iOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -669,7 +666,6 @@
 				6839296522977A970098E185 /* Colors.swift in Sources */,
 				68819DDE22A101A6001C023D /* StampModel.swift in Sources */,
 				683DE13122A0BE6400E46616 /* GameListModel.swift in Sources */,
-				6839292822968E410098E185 /* Get_Ballaena_iOS.xcdatamodeld in Sources */,
 				68E032452297DF28003FDE8B /* APIProtocol.swift in Sources */,
 				6839292222968E410098E185 /* LoginVC.swift in Sources */,
 				689738FB229E213F00B39854 /* LoginViewModel.swift in Sources */,
@@ -859,7 +855,7 @@
 		};
 		6839294822968E430098E185 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2071E59E5ED1E0BFA425BDDB /* Pods-Get-Ballaena-iOS.debug.xcconfig */;
+			baseConfigurationReference = 9DE8FF2A031445E37B92A0D5 /* Pods-Get-Ballaena-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -878,7 +874,7 @@
 		};
 		6839294922968E430098E185 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD3BD8BF3C2BB298F66B10D2 /* Pods-Get-Ballaena-iOS.release.xcconfig */;
+			baseConfigurationReference = BAC1957D0EC62D78530C0E40 /* Pods-Get-Ballaena-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -897,7 +893,7 @@
 		};
 		6839294B22968E430098E185 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F15225CF150BD117AD3A7C7F /* Pods-Get-Ballaena-iOSTests.debug.xcconfig */;
+			baseConfigurationReference = 74FA8392EC60C1C7ECE6DD73 /* Pods-Get-Ballaena-iOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -919,7 +915,7 @@
 		};
 		6839294C22968E430098E185 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23370C1A9EE52D4DBA7DCD27 /* Pods-Get-Ballaena-iOSTests.release.xcconfig */;
+			baseConfigurationReference = 4FDBBA7769E66C8F40F368CC /* Pods-Get-Ballaena-iOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -941,7 +937,7 @@
 		};
 		6839294E22968E430098E185 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 183B7F2C0B5A0E74C301A768 /* Pods-Get-Ballaena-iOSUITests.debug.xcconfig */;
+			baseConfigurationReference = CFF70F8C9F78CF7F6BF1D50C /* Pods-Get-Ballaena-iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -962,7 +958,7 @@
 		};
 		6839294F22968E430098E185 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B016F5CF309273541660EE35 /* Pods-Get-Ballaena-iOSUITests.release.xcconfig */;
+			baseConfigurationReference = 43E457C96980CB631EC80AC7 /* Pods-Get-Ballaena-iOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1021,19 +1017,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		6839292622968E410098E185 /* Get_Ballaena_iOS.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				6839292722968E410098E185 /* Get_Ballaena_iOS.xcdatamodel */,
-			);
-			currentVersion = 6839292722968E410098E185 /* Get_Ballaena_iOS.xcdatamodel */;
-			path = Get_Ballaena_iOS.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 6839291422968E410098E185 /* Project object */;
 }

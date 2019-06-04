@@ -14,7 +14,7 @@ import RxCocoa
 class CorrectAnswerVC: UIViewController {
     @IBOutlet weak var toMainBtn: UIButton!
     
-    var viewModel: GameViewModel!
+    var viewModel = GameViewModel()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -24,16 +24,16 @@ class CorrectAnswerVC: UIViewController {
 
 extension CorrectAnswerVC {
     func bindViewModel(){
-        viewModel = GameViewModel()
         
         toMainBtn.rx.tap
         .bind(to: viewModel.toMainDidClicked)
         .disposed(by: disposeBag)
         
         viewModel.toMainDone
-            .drive(onNext: { isClick in
+            .drive(onNext: { [weak self] isClick in
                 if isClick{
-                    self.navigationController?.popToRootViewController(animated: true)
+                    self?.navigationController?.popToRootViewController(animated: true)
+                    self?.viewModel.gameMapReady.accept(())
                 }
             })
         .disposed(by: disposeBag)
